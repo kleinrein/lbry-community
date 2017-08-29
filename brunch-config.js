@@ -5,11 +5,15 @@ exports.files = {
       'js/vendor.js': /^node_modules/,
     },
   },
-  stylesheets: { joinTo: 'css/app.css' },
+  stylesheets: {
+    joinTo: 'css/app.css'
+  },
 };
 
 exports.plugins = {
-  babel: { presets: ['latest', 'stage-0'] },
+  babel: {
+    presets: ['latest', 'stage-0']
+  },
   pleeease: {
     sass: true,
     autoprefixer: {
@@ -20,14 +24,17 @@ exports.plugins = {
     fonts: ['node_modules/bootstrap/dist/fonts'],
     onlyChanged: true,
   },
-  handlebars: {
-    include: {
-      runtime: false
-    },
-    pathReplace: /0^/,
-    locals: {
-      title: 'LBRY Community'
-    }
+  static: {
+    processors: [
+      require('html-brunch-static')({
+        processors: [
+          require('pug-brunch-static')({
+            fileMatch: 'app/index.pug',
+            fileTransform: (filename) => filename.replace('.pug', '.html')
+          })
+        ]
+      })
+    ]
   }
 };
 
