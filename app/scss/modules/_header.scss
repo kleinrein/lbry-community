@@ -1,6 +1,13 @@
 header {
+    padding: 2em 0;
+    align-items: center;
+    justify-content: center;
     ul {
         list-style-type: none;
         display: flex;
+        li {
+            text-transform: uppercase;
+            cursor: pointer;
+        }
     }
 }

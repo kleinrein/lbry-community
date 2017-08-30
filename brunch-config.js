@@ -35,6 +35,12 @@ exports.plugins = {
         ]
       })
     ]
+  },
+  plugins: {
+    browserSync: {
+        port: 3333,
+        logLevel: "debug"
+    }
   }
 };
 

@@ -1,0 +1,22 @@
+%btn {
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-block;
+    width: auto;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    background-color: transparent;
+    padding: 1.25em;
+    margin: 1em auto;
+    font-weight: 600;
+    font-size: 1.4rem;
+    &:hover {
+        background-color: $color-primary;
+        border: 2px solid $color-primary;
+        color: $color-light;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+}

@@ -7,7 +7,10 @@
 // modules
 @import "modules/header";
 @import "modules/layout";
+@import "modules/grid"; 
+@import "modules/image";
 
 // partials
-@import "partials/_buttons";
+@import "partials/buttons";
+@import "partials/sections";
 

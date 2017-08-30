@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "bootstrap": "^3",
+    "browser-sync-brunch": "0.0.9",
     "jquery": "^3"
   },
   "devDependencies": {
-    "auto-reload-brunch": "^2",
     "babel-brunch": "^6",
     "babel-preset-latest": "^6",
     "babel-preset-stage-0": "^6",
