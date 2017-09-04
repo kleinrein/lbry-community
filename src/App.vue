@@ -23,24 +23,9 @@ export default {
 }
 </script>
 
-<style>
-/* Typography */
-body {
-  background-color: #222222;
-  background-color: linear-gradient(to left top, #222222, #333333);
-  color: #DADADA;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-}
 
-h1,
-h2,
-h3 {
-  font-weight: normal;
-  text-transform: uppercase;
-}
+
+<style>
 
 #app {
   margin-top: 60px;

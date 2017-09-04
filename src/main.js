@@ -6,6 +6,7 @@ import App from './App'
 import router from './router'
 import Element from 'element-ui'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import './styles/main.scss'
 
 import 'element-ui/lib/theme-default/index.css'
 require('swiper/dist/css/swiper.css')

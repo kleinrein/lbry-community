@@ -210,44 +210,5 @@ export default {
   margin: 0 auto;
 }
 
-.btn-primary {
-  text-transform: uppercase;
-  border-radius: 5px;
-  width: auto;
-  border: 2px solid #145B49;
-  color: #145B49;
-  background-color: transparent;
-  padding: 1em;
-  margin: 2em auto;
-  font-weight: 600;
-  font-size: 1.2rem;
-  display: inline-block;
-}
 
-.btn-primary a {
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  background-color: #145B49;
-  border: 2px solid #145B49;
-  color: #145B49;
-}
-</style>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
