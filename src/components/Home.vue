@@ -157,12 +157,14 @@ export default {
   padding: 6em;
   margin-top: 0;
   margin-bottom: 2em;
+  width: auto;
 }
 
 .how-steps-wrapper {
   display: flex;
   width: 100%;
   align-items: center;
+  margin: 8em auto;
 }
 
 .how-steps-wrapper .el-step:last-child {
@@ -175,6 +177,10 @@ export default {
 
 .classic-list {
   list-style-type: circle !important;
+}
+
+.classic-list li {
+  display:list-item !important;
 }
 
 .section-resources {
