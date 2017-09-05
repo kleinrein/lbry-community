@@ -1,16 +1,13 @@
 // ** main.scss **
 
 // base
-@import "base/_core";
-@import "base/_typography";
+@import "base/core";
+@import "base/typography";
 
 // modules
-@import "modules/_button";
+@import "modules/button";
+@import "modules/image";
 
 // partials
-
-
-
-body {
-    
-}
+@import "partials/grid";
+@import "partials/content";

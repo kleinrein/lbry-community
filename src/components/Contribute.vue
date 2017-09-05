@@ -1,6 +1,9 @@
 <template>
     <section class="section-content">
-        <h2 class="text-center">Contribute</h2>
+        <h1 class="text-center">Contribute</h1>
+        <ul class="text-content">
+          <li><a href="https://lbry.community/contribute/intro.html">Translate</a> the "How LBRY Works: An introduction"</li>
+        </ul>
     </section>
 </template>
 

@@ -16,6 +16,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/how-lbry-works',
+      name: 'how-lbry-works',
+      component: Home
+    },
+    {
       path: '/projects',
       name: 'Projects',
       component: Projects

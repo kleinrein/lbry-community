@@ -5,7 +5,7 @@
         <img class="logo" src="./assets/logo.svg">
         <li class="col center"><router-link to="/">Home</router-link></li>
         <li class="col center"><a href="https://lbry.community/forum/">Forum</a></li>
-        <li class="col center">How LBRY works</li>
+        <li class="col center"><a href="#how-lbry-works" v-smooth-scroll="{ duration: 800, offset: 50 }">How LBRY works</a></li>
         <li class="col center"><router-link to="/projects">Projects</router-link></li>
         <li class="col center"><router-link to="/contests">Contests</router-link></li>
         <li class="col center"><router-link to="/about">About</router-link></li>
@@ -42,7 +42,8 @@ header {
 
 header ul li {
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 header ul li a {

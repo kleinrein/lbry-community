@@ -9,7 +9,7 @@
  * and add your own for vertical rhythm
  */
 
-$font-size-base : 14px;
+$font-size-base : 16px;
 $line-height-base : 28px;
 
 /* TYPOGRAPHY BASE
@@ -150,7 +150,7 @@ hr {
   * -------------------------------------------
   */
 
-.rhythm {
+.rhythm, .text-content {
     p,
     ul,
     ol,
@@ -175,7 +175,7 @@ hr {
   */
 
 
-.rhythm {
+.rhythm, .text-content {
     h1,
     h2,
     h3 {
@@ -214,7 +214,7 @@ hr {
   * and alpha lists.
   */
 
-.rhythm {
+.rhythm, .text-content {
     //
     h3+ul.bullet-list,
     h3+ul.numbered-list,
