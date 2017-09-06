@@ -3,17 +3,16 @@
     <section class="section-intro">
       <h1 class="text-center">{{ $t("welcome") }}</h1>
       <img class="img-gif-intro" src="../assets/lbry-animation-thelion.gif" />
-        <div>
-          <a href="https://lbry.io/get" class="btn-primary">Get the lbry app</a>
+      <div>
+        <a href="https://lbry.io/get" class="btn-primary">Get the lbry app</a>
+      </div>
+      <div class="ticker-wrapper">
+        <div class="ticker">
+          <p class="ticker-title">LBRY Credits</p>
+          <p class="ticker-price">
+            <b>{{lbry.price_usd}} USD ({{lbry.percent_change_24h}}%)</b>
+          </p>
         </div>
-        <div class="grid">
-          <div class="row">
-          <div class="flex"></div>
-            <div class="flex">
-              <p>LBRY Credits</p>
-              <p>0.328765 USD (-5.2%)</p>
-            </div>
-          </div>
       </div>
     </section>
     <section class="section-how" id="how-lbry-works">
@@ -67,21 +66,29 @@
     <section class="section-contact">
       <h2 class="title-underline-left">CONTACT US</h2>
       <p>Send us an email or go to the slack channel and contact @rouse</p>
-      <div>
-        <h4>https://slack.lbry.io</h4>
+      <div class="margin-bottom margin-top">
+        <img src="../assets/icon-slack.svg">
+        <p class="inline-block">https://slack.lbry.io</p>
       </div>
       <div>
-        <h4>hello@lbry.community</h4>
+        <img src="../assets/icon-email.svg">
+        <p>hello@lbry.community</p>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'hello',
   data () {
     return {
+      lbry: {
+        price_usd: 0,
+        percent_change_24h: 0
+      },
       swiperOption: {
         autoplay: 0,
         direction: 'horizontal',
@@ -106,12 +113,105 @@ export default {
         }
       }
     }
+  },
+  created () {
+    axios.get('https://api.coinmarketcap.com/v1/ticker/library-credit/')
+      .then(response => {
+        this.lbry = response.data[0]
+
+        if (this.lbry.percent_change_24h > 0) {
+          this.$el.querySelector('.ticker-price').classList.add('ticker-positive')
+        } else {
+          this.$el.querySelector('.ticker-price').classList.add('ticker-negative')
+        }
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
   }
 }
 </script>
 
-<style>
+
+<style lang="scss">
+.section-contact {
+  div p {
+    font-size: 2rem;
+    margin: .25em 0;
+  }
+  img {
+    max-height: 100%;
+    width: 3em;
+  }
+}
+
+@keyframes negative-number {
+  0% {
+    color: #717171;
+  }
+  2% {
+    opacity: 1;
+  }
+  20% {
+    color: #e74c3c;
+  }
+  100% {
+    color: #717171;
+    opacity: 1;
+  }
+}
+
+@keyframes positive-number {
+  0% {
+    color: #717171;
+  }
+  2% {
+    opacity: 1;
+  }
+  20% {
+    color: #2ecc71;
+  }
+  100% {
+    color: #717171;
+    opacity: 1;
+  }
+}
+
+.ticker-wrapper {
+  display: flex;
+  max-width: 85%;
+  width: 100%;
+  justify-content: flex-end;
+  .ticker-title {
+    color: #717171;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .ticker-price {
+    color: #717171;
+    margin: 0;
+  }
+  .ticker-positive {
+    animation-name: positive-number;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+  }
+  .ticker-negative {
+    animation-name: negative-number;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+  }
+}
+
+.ticker {
+  position: relative;
+}
+
+
 /* Sections */
+
 .section-full {
   height: 100vh;
 }
@@ -129,6 +229,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 
 
 
@@ -169,10 +270,12 @@ export default {
 
 .classic-list {
   list-style-type: square !important;
+  width: 700px;
+  margin: 0 auto;
 }
 
 .classic-list li {
-  display:list-item !important;
+  display: list-item !important;
 }
 
 .section-resources {
@@ -207,6 +310,4 @@ export default {
   width: 44em;
   margin: 2em auto;
 }
-
-
 </style>

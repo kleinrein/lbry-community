@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+// Components
 import Home from '@/components/Home'
 import Projects from '@/components/Projects'
 import Contests from '@/components/Contests'
 import Contribute from '@/components/Contribute'
+import About from '@/components/About'
 
 Vue.use(Router)
 
@@ -34,6 +36,11 @@ export default new Router({
       path: '/contribute',
       name: 'Contribute',
       component: Contribute
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
     }
   ],
   linkActiveClass: 'active'
