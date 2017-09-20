@@ -34,14 +34,18 @@ Domain Path: #{metadata(theme-text-domain-path)}
 
 // Everything else
 @import "helpers";
-@import "general";
 @import "layout";
 @import "menus";
 @import "navigation";
 @import "sidebar";
 
 // base
+@import "base/core";
 @import "base/nav";
 
 // modules
 @import "modules/button";
+
+// partials
+@import "partials/content";
+@import "partials/sections";

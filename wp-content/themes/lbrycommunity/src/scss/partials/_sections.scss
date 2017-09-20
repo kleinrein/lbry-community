@@ -1,0 +1,35 @@
+.section-full {
+    height: 100vh;
+}
+
+.section-content {
+    margin: 4em auto;
+    width: 80%;
+}
+
+.section-intro {
+    margin: 4em 0;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-how {
+    height: 100vh;
+    background-color: #2D2D2D;
+    padding: 4em;
+}
+
+.section-resources {
+    height: 100vh;
+    padding: 4em;
+    background-color: linear-gradient(to right, #2E2E2E, #2D2D2D);
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section-contact {
+    height: 100vh;
+    padding: 4em;
+}
