@@ -1,0 +1,13 @@
+// colors
+$color-primary: #145B49;
+$color-white: #ffffff;
+// body
+body {
+    background-color: #222222;
+    background-color: linear-gradient(to left top, #222222, #333333);
+    color: #DADADA;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+}
