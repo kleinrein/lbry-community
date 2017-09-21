@@ -1,11 +1,12 @@
 <?php get_header(); ?>
   <div id="wrap-content" class="wrap-content">
-    <div id="content" class="site-content">
+    <div id="content" class="site-content wrapper">
 
+      <!-- Intro section -->
       <section id="primary" class="content-area">
         <main id="main" class="site-main">
         <section class="section-intro">
-        <h1 class="text-center">Velkommen</h1>
+        <h1 class="text-center">Welcome to LBRY.COMMUNITY</h1>
         <img class="img-gif-intro" src="../assets/lbry-animation-thelion.gif" />
         <div>
           <a href="https://lbry.io/get" class="btn-primary">Get the lbry app</a>
@@ -14,7 +15,7 @@
           <div class="ticker">
             <p class="ticker-title">LBRY Credits</p>
             <p class="ticker-price">
-              <b>{{lbry.price_usd}} USD ({{lbry.percent_change_24h}}%)</b>
+              <b></b>
             </p>
           </div>
         </div>
@@ -69,3 +70,23 @@
     </div>
   </div>
 <?php get_footer(); ?>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+  window.onload = function() {
+      axios.get('https://api.coinmarketcap.com/v1/ticker/library-credit/')
+      .then(response => {
+        var lbry = response.data[0]
+
+        if (lbry.percent_change_24h > 0) {
+          document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
+          document.querySelector('.ticker-price').classList.add('ticker-positive')
+        } else {
+          document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
+          document.querySelector('.ticker-price').classList.add('ticker-negative')
+        }
+      })
+      .catch(e => {
+        this.errors.push(e)
+      });
+    }
+  </script>
