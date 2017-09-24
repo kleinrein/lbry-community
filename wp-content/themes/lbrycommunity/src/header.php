@@ -14,6 +14,7 @@
     <div id="wrap-header" class="wrap-header">
       <header id="masthead" class="site-header">
         <div class="site-branding">
+          <img src="images/logo.svg" />
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
           <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
         </div>

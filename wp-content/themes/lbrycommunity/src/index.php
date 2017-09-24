@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-  <div id="wrap-content" class="wrap-content">
     <div id="content" class="site-content wrapper">
 
       <!-- Intro section -->
@@ -7,7 +6,7 @@
         <main id="main" class="site-main">
         <section class="section-intro">
         <h1 class="text-center">Welcome to LBRY.COMMUNITY</h1>
-        <img class="img-gif-intro" src="../assets/lbry-animation-thelion.gif" />
+        <img class="img-gif-intro" src="images/lbry-animation-thelion.gif" />
         <div>
           <a href="https://lbry.io/get" class="btn-primary">Get the lbry app</a>
         </div>
@@ -67,7 +66,6 @@
         </main>
         <?php voidx_post_navigation(); ?>
       </section>
-    </div>
   </div>
 <?php get_footer(); ?>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -78,11 +76,11 @@
         var lbry = response.data[0]
 
         if (lbry.percent_change_24h > 0) {
-          document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
           document.querySelector('.ticker-price').classList.add('ticker-positive')
-        } else {
           document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
+        } else {
           document.querySelector('.ticker-price').classList.add('ticker-negative')
+          document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
         }
       })
       .catch(e => {
