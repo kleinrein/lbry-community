@@ -1,5 +1,7 @@
 <?php // ==== ASSETS ==== //
 
+declare(strict_types=1);
+
 // Now that you have efficiently generated scripts and stylesheets for your theme, how should they be integrated?
 // This file walks you through an approach I use but you are free to do this any way you like
 

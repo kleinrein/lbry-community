@@ -1,8 +1,9 @@
 @keyframes negative-number {
     0% {
       color: #717171;
+      opacity: 0;
     }
-    2% {
+    10% {
       opacity: 1;
     }
     20% {
@@ -17,8 +18,9 @@
   @keyframes positive-number {
     0% {
       color: #717171;
+      opacity: 0;
     }
-    2% {
+    10% {
       opacity: 1;
     }
     20% {

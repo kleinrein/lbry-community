@@ -27,3 +27,24 @@
 %spacer-below-3 {
   margin-bottom: spacer(3);
 }
+
+.margin-bottom {
+  margin-bottom: 4em;
+}
+
+.margin-top {
+  margin-top: 4em;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+}

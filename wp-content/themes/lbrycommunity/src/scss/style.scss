@@ -7,7 +7,7 @@
 @import "scut";
 
 // Configuration variables and settings
-@import "config";
+@import "base/core";
 
 // Library: mixins, functions, etc. specific to this theme
 @import "library";
@@ -33,7 +33,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "normalize";
 
 // Everything else
-@import "helpers";
+@import "partials/helpers";
 @import "layout";
 @import "menus";
 @import "navigation";
@@ -45,9 +45,11 @@ Domain Path: #{metadata(theme-text-domain-path)}
 
 // modules
 @import "modules/button";
+@import "modules/image";
 
 // partials
 @import "partials/content";
 @import "partials/sections";
-@import "partials/utility";
+@import "partials/helpers";
 @import "partials/ticker";
+@import "partials/grid";
