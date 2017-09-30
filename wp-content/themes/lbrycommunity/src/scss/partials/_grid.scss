@@ -22,7 +22,7 @@ $gutter-width: 20px !default;
 // Grid width and max-width.
 // It is automatically centered on the page.
 $grid-width: 1480px !default;
-$grid-max-width: 80% !default;
+$grid-max-width: 90% !default;
 
 // Pushes and Pulls
 $pushes: true !default;
@@ -84,7 +84,8 @@ $breakpoints: (
 }
 
 .w-auto {
-  flex: 1
+  flex: 1;
+  width:100%;
 }
 
 @each $col-am in $grid-columns {

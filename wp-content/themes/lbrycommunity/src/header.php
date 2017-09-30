@@ -10,24 +10,18 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-    <div id="wrap-header" class="wrap-header">
-        <header id="masthead" class="site-header grid center">
-            <div class="row center">
-                <div class="col center">
+<div class="wrapper">
+    <div class="grid">
+        <header class="row center">
+                <div class="flex">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                         <img class="img-header" src="<?php echo get_bloginfo('template_url') ?>/images/logo.svg"/>
                     </a>
                 </div>
-
-                <div class="flex"></div>
-
+                <div class="col"></div>
                 <button id="responsive-menu-toggle"><?php _e('Menu', 'voidx'); ?></button>
                 <nav id="site-navigation" class="site-navigation col">
                     <div id="responsive-menu"><?php wp_nav_menu(array('theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline')); ?></div>
                 </nav>
-
-            </div>
         </header>
     </div>
-    <div id="wrap-main" class="wrap-main">

@@ -15,7 +15,6 @@ $break-large:   800px;
 // A standard margin
 $spacer:        30px;
 
-// A modest palette; see `_library.scss` for the color() function
 $_color: (
         primary: #145B49,
         text: #DADADA,
@@ -55,3 +54,9 @@ img {
     height: auto;
     max-width: 100%;
   }
+
+.wrapper {
+    display: flex;
+    min-height:100vh;
+    flex-direction:column;
+}

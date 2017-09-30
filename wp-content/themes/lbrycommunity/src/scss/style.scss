@@ -10,7 +10,7 @@
 @import "base/core";
 
 // Library: mixins, functions, etc. specific to this theme
-@import "library";
+@import "base/library";
 
 /*!
 Theme Name: #{metadata(theme-name)}
@@ -32,24 +32,21 @@ Domain Path: #{metadata(theme-text-domain-path)}
 // Normalize: make browsers render things more consistently
 @import "normalize";
 
-// Everything else
-@import "partials/helpers";
-@import "layout";
-@import "menus";
-@import "navigation";
-@import "sidebar";
-
-// base
+// Base
 @import "base/core";
 @import "base/nav";
 
-// modules
+// Modules
 @import "modules/button";
 @import "modules/image";
+@import "modules/content";
 
-// partials
-@import "partials/content";
+// Partials
 @import "partials/sections";
 @import "partials/helpers";
 @import "partials/ticker";
 @import "partials/grid";
+@import "partials/footer";
+@import "partials/helpers";
+@import "partials/menus";
+@import "partials/navigation";
