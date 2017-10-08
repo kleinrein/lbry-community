@@ -63,7 +63,27 @@
 </div>
 <?php get_footer(); ?>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 <script>
+    var socket = io('http://socket.coincap.io');
+    socket.on('connect', function(){});
+    socket.on('trades', function(data){
+        console.log(data.coin)
+        if (data.coin === 'LBC') {
+            const price = data.message.msg.price
+            const perc = data.message.msg.perc
+            if(price > 0)
+            {
+                document.querySelector('.ticker-price').classList.add('ticker-positive')
+            } else {
+                document.querySelector('.ticker-price').classList.add('ticker-negative')
+            }
+            document.querySelector('.ticker-price b').innerHTML = price + " USD" + " (" + perc + "%)"
+        }
+    });
+    socket.on('disconnect', function(){});
+
+
     window.onload = function () {
         axios.get('https://api.coinmarketcap.com/v1/ticker/library-credit/')
              .then(response => {
