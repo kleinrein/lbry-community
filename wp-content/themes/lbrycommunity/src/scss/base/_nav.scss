@@ -19,18 +19,18 @@ header ul li a:hover {
     color: #AFAFAF;
 }
 
-.current_page_item a {
+.current_page_item a,
+.current-menu-item a {
     color: #AFAFAF;
-}
-
-.current_page_item a:after {
-    content: " ";
-    position: absolute;
-    width: 80%;
-    height: 1px;
-    background-color: #145B49;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: -5px;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: #145B49;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+    }
 }

@@ -55,6 +55,7 @@
     "postinstall": "mv node_modules/normalize.css/normalize.css node_modules/normalize.css/_normalize.scss"
   },
   "dependencies": {
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "node-sass": "^4.5.3"
   }
 }

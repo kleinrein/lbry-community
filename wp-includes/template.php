@@ -115,7 +115,7 @@ function get_archive_template() {
 		$post_type = reset( $post_types );
 		$templates[] = "archive-{$post_type}.php";
 	}
-	$templates[] = 'archive.php';
+	$templates[] = 'page-articles.php';
 
 	return get_query_template( 'archive', $templates );
 }

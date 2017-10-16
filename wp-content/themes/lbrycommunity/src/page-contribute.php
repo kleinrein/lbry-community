@@ -1,2 +1,2 @@
 <?php
-/* Template Name: Contribute /
+/* Template Name: Contribute */

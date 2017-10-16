@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<!-- Intro section -->
+        <!-- Intro section -->
         <section class="container center section-air">
             <h1 class="text-center mx-auto">Welcome to LBRY.COMMUNITY</h1>
             <img class="img img-gif-intro center"
                  src="<?php echo get_bloginfo('template_url') ?>/images/lbry-animation-thelion.gif"/>
             <div class="flex">
-                <a href="https://lbry.io/get" class="btn-primary">Get the lbry app</a>
+                <a href="https://lbry.io/get" class="btn--secondary">Get the lbry app</a>
             </div>
             <div class="ticker-wrapper">
                 <div class="ticker">
@@ -63,44 +63,39 @@
 </div>
 <?php get_footer(); ?>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 <script>
-    var socket = io('http://socket.coincap.io');
-    socket.on('connect', function(){});
-    socket.on('trades', function(data){
-        console.log(data.coin)
-        if (data.coin === 'LBC') {
-            const price = data.message.msg.price
-            const perc = data.message.msg.perc
-            if(price > 0)
-            {
-                document.querySelector('.ticker-price').classList.add('ticker-positive')
-            } else {
-                document.querySelector('.ticker-price').classList.add('ticker-negative')
-            }
-            document.querySelector('.ticker-price b').innerHTML = price + " USD" + " (" + perc + "%)"
-        }
-    });
-    socket.on('disconnect', function(){});
-
-
     window.onload = function () {
-        axios.get('https://api.coinmarketcap.com/v1/ticker/library-credit/')
-             .then(response => {
-            var lbry = response.data[0]
+        const ticker = document.querySelector('.ticker-price')
 
-            if(lbry.percent_change_24h > 0)
-            {
-                document.querySelector('.ticker-price').classList.add('ticker-positive')
-                document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
-            }
-            else
-            {
-                document.querySelector('.ticker-price').classList.add('ticker-negative')
-                document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
-            }
-        })
-    .catch(e => {
-        this.errors.push(e)
-    })}
+        function updateTicker() {
+            axios.get('https://api.coinmarketcap.com/v1/ticker/library-credit/')
+                .then(response => {
+                    let lbry = response.data[0]
+
+                    ticker.classList.remove('ticker-negative')
+                    ticker.classList.remove('ticker-positive')
+
+                    ticker.style.animation = 'none'
+                    ticker.offsetHeight
+                    ticker.style.animation = null;
+
+                    if (lbry.percent_change_24h > 0) {
+                        ticker.classList.add('ticker-positive')
+                    }
+                    else {
+                        ticker.classList.add('ticker-negative')
+                    }
+                    document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
+                })
+                .catch(e => {
+                    this.errors.push(e)
+                })
+        }
+        updateTicker()
+
+        window.setInterval(() => {
+            console.count('interval')
+            updateTicker()
+        }, 20000)
+    }
 </script>

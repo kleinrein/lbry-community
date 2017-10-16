@@ -23,7 +23,7 @@ $wp_file_descriptions = array(
 	'link.php'              => __( 'Links Template' ),
 	// Archives
 	'index.php'             => __( 'Main Index Template' ),
-	'archive.php'           => __( 'Archives' ),
+	'page-articles.php'           => __( 'Archives' ),
 	'author.php'            => __( 'Author Template' ),
 	'taxonomy.php'          => __( 'Taxonomy Template' ),
 	'category.php'          => __( 'Category Template' ),
