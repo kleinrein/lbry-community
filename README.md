@@ -8,6 +8,8 @@
 * PHP editor by choice
 * Node & NPM (and Yarn)
 
+## Development
+
 1. Create a site on Local
 2. Clone content of this repo onto the newly created project (Usually [username]/Local Sites)
 3. Start site on Local
