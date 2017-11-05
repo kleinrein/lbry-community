@@ -1,2 +1,0 @@
-<?php
-/* Template Name: Contribute */
