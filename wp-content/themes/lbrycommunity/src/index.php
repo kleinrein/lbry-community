@@ -1,53 +1,58 @@
 <?php get_header(); ?>
 
         <!-- Intro section -->
-        <section class="container center section-air">
-            <h1 class="text-center mx-auto">Welcome to LBRY.COMMUNITY</h1>
-            <img class="img img-gif-intro center"
-                 src="<?php echo get_bloginfo('template_url') ?>/images/lbry-animation-thelion.gif"/>
-            <div class="flex">
-                <a href="https://lbry.io/get" class="btn--secondary">Get the lbry app</a>
-            </div>
-            <div class="ticker-wrapper">
-                <div class="ticker">
-                    <p class="ticker-title">LBRY Credits</p>
-                    <p class="ticker-price">
-                        <b>...</b>
-                    </p>
+        <section class="container center section-intro">
+            <div class="content-text--full-height">
+                <h1 class="text-center mx-auto">Create, share, earn.</h1>
+                <h4 class="text-center mx-auto">Content freedom</h4>
+                <div class="flex">
+                    <a href="https://lbry.io/get" class="btn--primary">Get LBRY</a>
+                </div>
+                <div class="ticker-wrapper">
+                    <div class="ticker">
+                        <p class="ticker-title">LBRY Credits</p>
+                        <p class="ticker-price">
+                            <b>...</b>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="container section-air">
-            <h2 class="title-underline-right">RESOURCES & ARTICLES</h2>
-            <?php if (have_posts()) {
-                while (have_posts()) : the_post(); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-                        <header class="entry-header">
-                            <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-                        </header>
-                        <?php printf(__('<time datetime="%1$s">%2$s</time> by %3$s. ', 'voidx'), get_post_time('c'), get_the_date(), get_the_author()); ?>
-                        <div class="entry-content">
-                            <?php the_content(); ?>
-                            <?php wp_link_pages(); ?>
-                        </div>
-                    </article>
-                <?php endwhile;
-            } else { ?>
-                <article id="post-0" class="post no-results not-found">
-                    <header class="entry-header">
-                        <h1><?php _e('Not found', 'voidx'); ?></h1>
-                    </header>
-                    <div class="entry-content">
-                        <p><?php _e('Sorry, but your request could not be completed.', 'voidx'); ?></p>
-                        <?php get_search_form(); ?>
-                    </div>
-                </article>
-            <?php } ?>
+            <h3 class="text-center title-secondary">What is LBRY?</h3>
+        </section>
+
+        <section class="container section-air section-m-abs">
+            <h3 class="text-cente title-secondary">How lbry works</h3>
         </section>
 
         <section class="container section-air">
-            <h2 class="title-underline-left">CONTACT US</h2>
+            <h3 class="text-center title-secondary">Articles</h3>
+
+            <div class="grid full-width">
+
+                <?php if (have_posts()) {
+                    ?>
+                    <div class="row">
+                    <?php
+                    while (have_posts()) : the_post(); ?>
+                        <div class="col col-2-of-12">
+                            <article class="article-wrapper">
+
+                            </article>
+                        </div>
+                    <?php endwhile;
+                    ?>
+                    </div>
+                    ?>
+                        <?php
+                } ?>
+            </div>
+        </section>
+
+        <section class="container section-air">
+            <h2 class="title-underline">Contact us</h2>
             <p>Send us an email or go to the slack channel and contact @rouse</p>
             <div class="margin-bottom margin-top">
                 <img class="img-micro" src="<?php echo get_bloginfo('template_url') ?>/images/icon-slack.svg">
@@ -60,8 +65,20 @@
         </section>
 
     <?php voidx_post_navigation(); ?>
-</div>
+</section>
 <?php get_footer(); ?>
+
+<style>
+    .section-intro {
+        background:
+                linear-gradient(
+                        rgba(0, 0, 0, 0.75),
+                        rgba(0, 0, 0, 0.5)
+                ),
+                url("<?php echo get_bloginfo('template_url') ?>/images/forest.jpg");
+    }
+</style>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     window.onload = function () {

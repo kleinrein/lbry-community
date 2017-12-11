@@ -26,15 +26,13 @@ Text Domain: #{metadata(theme-text-domain)}
 Domain Path: #{metadata(theme-text-domain-path)}
 */
 
-// Reset: eliminate default browser styling (optional; commented out by default)
-//@import "reset";
-
 // Normalize: make browsers render things more consistently
 @import "normalize";
 
 // Base
 @import "base/core";
 @import "base/nav";
+@import "base/_typography";
 
 // Modules
 @import "modules/button";

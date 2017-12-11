@@ -11,14 +11,13 @@
   }
 }
 
-.text-content {
-  max-width: 600px;
+.content-text {
+  max-width: 760px;
   margin: 4em auto;
-}
-
-.text-content a {
-  color: #ffffff;
-  text-decoration: underline;
+  &--full-height {
+    position: relative;
+    padding: 45vh 10vw;
+  }
 }
 
 .text-content-part {
@@ -33,28 +32,17 @@
   position: absolute;
 }
 
-.title-underline-left {
+.title-underline {
+  text-align: center;
   position: relative;
   margin-bottom: 1.5em;
   &:after {
     @extend %pseudo;
-    height: 5px;
+    height: 2px;
     width: 4em;
     left: 0;
-    background-color: color(primary);
-    bottom: -20px;
-  }
-}
-
-.title-underline-right {
-  position: relative;
-  margin-bottom: 1.5em;
-  text-align: right;
-  &:after {
-    @extend %pseudo;
-    height: 5px;
-    width: 4em;
     right: 0;
+    margin: 0 auto;
     background-color: color(primary);
     bottom: -20px;
   }

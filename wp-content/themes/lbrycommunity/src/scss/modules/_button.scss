@@ -1,24 +1,24 @@
 %btn {
-  text-transform: uppercase;
-  border-radius: 5px;
   width: auto;
-  border: 2px solid color(primary);
   color: color(primary);
   background-color: transparent;
-  padding: .75em 2.25em;
+  padding: .5em 2.25em;
   margin: 2.5em auto;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: inline-block;
   text-decoration: none;
+  border-radius: 2em;
 }
 
 .btn {
   &--primary {
     @extend %btn;
-    background-color: color(primary);
-    margin: .75em 0;
+    background: linear-gradient(180deg, #8F33B6 0%, #8F33B6 0.01%, #BA3DEE 98.9%);
+    margin: .75em auto;
     font-size: 1rem;
+    color: color(white);
+    letter-spacing: 0.05em;
   }
   &--secondary {
     @extend %btn;

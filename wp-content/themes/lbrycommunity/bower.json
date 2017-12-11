@@ -1,23 +1,6 @@
 {
-  "name": "wordpress-gulp-starter-kit",
-  "homepage": "https://github.com/synapticism/wordpress-gulp-starter-kit",
-  "authors": [
-    {
-      "name": "Alexander Synaptic",
-      "email": "alexander@synapticism.com",
-      "homepage": "http://synapticism.com"
-    }
-  ],
-  "keywords": [
-    "wordpress",
-    "wordpress-theme",
-    "starter-kit",
-    "gulp",
-    "bower",
-    "sass",
-    "browsersync",
-    "livereload"
-  ],
+  "name": "lbry-community",
+  "homepage": "https://github.com/kleinrein/lbry-community",
   "license": "GPL-3.0",
   "ignore": [
     "**/.*",

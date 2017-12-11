@@ -1,3 +1,25 @@
+
+// ** Index **
+
+.section-intro {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100% !important;
+  left: 0;
+  max-width: 100% !important;
+  height: 100vh;
+  flex: 1;
+  top: -13.5em;
+  margin-bottom: -13.5em !important;
+  position: relative;
+}
+
+.section-air {
+  flex: 1;
+}
+
 .section-full {
   height: 100vh;
 }

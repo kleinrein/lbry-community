@@ -1,36 +1,21 @@
 .article-wrapper {
-  background: #282828;
-  border: 1px solid #171717;
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 2em;
-  a {
-    text-decoration: none;
-    color: color(text);
-  }
-  .article-meta-extra {
-    position: relative;
-    color: color(dark);
-    z-index: 1;
-    padding: .5em;
-    display: inline-block;
-    h6 {
-      margin: 0;
-      font-weight: 600;
-    }
+  &--small {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 1em;
     a {
-      color: color(dark);
+      text-decoration: none;
+      color: color(text);
     }
-    &:after {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-      background-color: color(white);
-      z-index: -1;
-      border-radius: 3px;
+    .article-meta-extra {
+      position: relative;
+      z-index: 1;
+      padding: .5em 0;
+      display: inline-block;
+      h6 {
+        margin: 0;
+        font-weight: 600;
+      }
     }
   }
 }

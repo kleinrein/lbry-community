@@ -16,13 +16,17 @@
         <header class="row center">
                 <div class="flex">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                        <img class="img-header" src="<?php echo get_bloginfo('template_url') ?>/images/logo.svg"/>
+                        <img class="img-header" src="<?php echo get_bloginfo('template_url') ?>/images/lbrycommunity.svg"/>
                     </a>
                 </div>
                 <div class="col"></div>
-                <button id="responsive-menu-toggle"><?php _e('Menu', 'voidx'); ?></button>
+                <button id="responsive-menu-toggle"><?php _e('Menu', 'lbrycommunity'); ?></button>
                 <nav id="site-navigation" class="site-navigation col">
                     <div id="responsive-menu"><?php wp_nav_menu(array('theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline')); ?></div>
                 </nav>
+                <div class="menu-full-screen">
+                    <?php wp_nav_menu(array('theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline')); ?>
+                </div>
+                <button class="btn--nav">Menu</button>
         </header>
     </div>
