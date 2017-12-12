@@ -11,14 +11,5 @@
                 $('time').timeago();
             });
         }
-
-        // Menu
-        const navBtn = document.querySelector(".btn--nav")
-        const navWrapper = document.querySelector(".menu-full-screen")
-
-        $(navBtn).click(_ => {
-            $(navBtn).toggle("active")
-            $(navWrapper).toggle("active")
-        })
     });
 }(jQuery));

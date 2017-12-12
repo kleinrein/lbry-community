@@ -1,17 +1,6 @@
 <?php
 /**
- * The template for displaying comments.
- *
- * The area of the page that contains both current comments
- * and the comment form.
- *
- * @package _mbbasetheme
- */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
+ * Comments
  */
 if (post_password_required()) {
     return;
@@ -32,9 +21,9 @@ if (post_password_required()) {
 
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // are there comments to navigate through ?>
             <nav id="comment-nav-above" class="comment-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e('Comment navigation', '_mbbasetheme'); ?></h1>
-                <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', '_mbbasetheme')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', '_mbbasetheme')); ?></div>
+                <h1 class="screen-reader-text"><?php _e('Comment navigation'); ?></h1>
+                <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;')); ?></div>
             </nav>
         <?php endif; // check for comment navigation ?>
 

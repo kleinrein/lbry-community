@@ -9,7 +9,7 @@
     padding: 0;
     & > li {
       float: left;
-      margin-right: spacer(1/2);
+      margin-right: spacer();
       &:last-of-type {
         margin-right: 0;
       }
@@ -24,5 +24,52 @@
 #responsive-menu-toggle {
   @include media-above($break-medium) {
     display: none;
+  }
+}
+
+.current-menu-item a {
+  color: #AFAFAF;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255,255,255,.25);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: scale(1.5);
+    border-radius: 2em;
+  }
+}
+
+// Full screen menu
+.menu-full-screen {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(100vh at 50% 50%, #262626 0%, #1A1A1A 100%);
+  ul {
+    max-width: 600px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    li {
+      list-style:  none;
+      font-size: 2rem;
+      line-height: 4rem;
+      font-weight: 400;
+    }
+  }
+  &.active {
+    display: block;
   }
 }

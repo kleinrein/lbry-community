@@ -18,6 +18,9 @@
     position: relative;
     padding: 45vh 10vw;
   }
+  a {
+    color: color(blue);
+  }
 }
 
 .text-content-part {
@@ -27,23 +30,15 @@
   }
 }
 
+.four-lines {
+  display: block;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 %pseudo {
   content: " ";
   position: absolute;
-}
-
-.title-underline {
-  text-align: center;
-  position: relative;
-  margin-bottom: 1.5em;
-  &:after {
-    @extend %pseudo;
-    height: 2px;
-    width: 4em;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: color(primary);
-    bottom: -20px;
-  }
 }

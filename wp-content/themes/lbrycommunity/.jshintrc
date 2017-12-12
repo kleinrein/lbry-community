@@ -15,6 +15,7 @@
     "jquery": true,
     "curly": true,
     "supernew": true,
+    "asi": true,
     "globals": {
         "_": true,
         "jQuery": true,

@@ -21,6 +21,17 @@
 
         <section class="container section-air">
             <h3 class="text-center title-secondary">What is LBRY?</h3>
+            <div class="slider-what-is-lbry">
+                <div>
+                    <h2>LBRY Protocol & LBRY App</h2>
+                    <p>LBRY Protocol is built using blockchain technology</p>
+                    <p>This means no one can edit or remove the information
+                        which is published, except the owner of the publication</p>
+                    <p>Not even the developers at LBRY Inc. can change it</p>
+                </div>
+                <div><h2>Slide 2</h2></div>
+                <div><h2>Slide 3</h2></div>
+            </div>
         </section>
 
         <section class="container section-air section-m-abs">
@@ -52,7 +63,7 @@
         </section>
 
         <section class="container section-air">
-            <h2 class="title-underline">Contact us</h2>
+            <h3 class="text-center title-secondary">Contact us</h3>
             <p>Send us an email or go to the slack channel and contact @rouse</p>
             <div class="margin-bottom margin-top">
                 <img class="img-micro" src="<?php echo get_bloginfo('template_url') ?>/images/icon-slack.svg">
@@ -64,7 +75,6 @@
             </div>
         </section>
 
-    <?php voidx_post_navigation(); ?>
 </section>
 <?php get_footer(); ?>
 
