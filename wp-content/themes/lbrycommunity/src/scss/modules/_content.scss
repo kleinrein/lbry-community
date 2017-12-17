@@ -12,6 +12,7 @@
 }
 
 .content-text {
+  @extend .rhythm;
   max-width: 760px;
   margin: 4em auto;
   &--full-height {

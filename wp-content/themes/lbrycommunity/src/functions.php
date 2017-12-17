@@ -62,7 +62,7 @@ function post_single_small($category, $posts_per_page = 4)
         'category_name' => $category,
     ));
 
-    echo '<div class="grid full-width">';
+    echo '<div class="grid full-width margin-bottom">';
     if ($query->have_posts()) {
         echo '<div class="row">';
         while ($query->have_posts()) {
@@ -73,15 +73,3 @@ function post_single_small($category, $posts_per_page = 4)
     }
     echo '</div>';
 }
-
-
-/**
- * Filter the except length to 20 words.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
-function wpdocs_custom_excerpt_length( $length ) {
-    return 15;
-}
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

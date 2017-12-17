@@ -1,6 +1,7 @@
 <?php
 /**
- * Comments
+ * Show comments
+ * @package lbry
  */
 if (post_password_required()) {
     return;

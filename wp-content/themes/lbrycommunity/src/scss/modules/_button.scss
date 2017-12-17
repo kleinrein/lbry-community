@@ -40,6 +40,11 @@
   }
   &--nav {
     z-index: 10;
+    cursor: pointer;
     position: relative;
+    background-color: rgba(0,0,0,0.2);
+    padding: 0.25rem 1rem;
+    border-radius: 0.75rem;
+    color: color(white);
   }
 }

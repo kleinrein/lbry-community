@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: rein
- * Date: 12.12.2017
- * Time: 18:10
+ * Display a small article
+ * @package lbry
  */
 
 ?>
@@ -31,7 +29,7 @@
         }
         ?>
 
-        <h2><a href="<?php the_permalink(); ?>" class="category-title-link"><?php the_title(); ?></a></h2>
+        <h3><a href="<?php the_permalink(); ?>" class="category-title-link"><?php the_title(); ?></a></h3>
 
         <div class="category-post">
             <div class="article-meta-extra">
@@ -51,7 +49,7 @@
             </div>
 
             <p class="four-lines">
-                <?php the_excerpt(); ?>
+                <?php echo substr(strip_tags(get_the_excerpt(), 2), 0, 100) . '...'; ?>
             </p>
         </div>
         <?php if (has_tag()) { ?>

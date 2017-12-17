@@ -1,8 +1,5 @@
 // ==== STYLES ==== //
 
-// Do not declare anything before the metadata block; this first section is solely for variable, function, and mixin definitions
-// Note: `bower_components` is already in Sass's path
-
 // Scut, a Sass utilities library: https://davidtheclark.github.io/scut/
 @import "scut";
 
@@ -37,6 +34,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 // Modules
 @import "modules/button";
 @import "modules/image";
+@import "modules/flex";
 @import "modules/content";
 
 // Partials

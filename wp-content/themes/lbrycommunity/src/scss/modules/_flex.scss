@@ -1,0 +1,16 @@
+.flex--container {
+  display: flex;
+  &--column {
+    @extend .flex--container;
+    flex-direction: column;
+  }
+  &--row {
+    @extend .flex--container;
+    flex-direction: row;
+  }
+}
+
+.flex--item {
+  display: flex;
+  flex: 1;
+}

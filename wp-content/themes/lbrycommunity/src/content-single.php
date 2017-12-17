@@ -1,14 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: rein
- * Date: 26.11.2017
- * Time: 10:25
+ * Display  a single article
+ * @package lbry
  */
 ?>
 
 
-<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article class="article--single">
     <div class="content-text">
         <p class="published" title="<?php the_time('c') ?>"><?php the_time(get_option('date_format')); ?></p>
         <h2 class="entry-title"><?php if (the_title('', '', false) != '') the_title(); else echo 'Untitled'; ?></h2>

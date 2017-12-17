@@ -21,11 +21,13 @@
                     </a>
                 </div>
                 <div class="col"></div>
-                <button id="responsive-menu-toggle"><?php _e('Menu', 'lbrycommunity'); ?></button>
                 <nav id="site-navigation" class="site-navigation col">
                     <div id="responsive-menu"><?php wp_nav_menu(array('theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline')); ?></div>
                 </nav>
-                <?php wp_nav_menu(array('container_class' => 'menu-full-screen', 'menu' => 'full' ,'theme_location' => 'header', 'menu_class' => 'menu-full-screen-content')); ?>
+                <div class="menu-full-screen">
+                    <?php wp_nav_menu(array('menu' => 'full' ,'theme_location' => 'header', 'menu_class' => 'menu-full-screen-content')); ?>h
+                    <?php get_search_form(); ?>
+                </div>
                 <button class="btn--nav">Menu</button>
         </header>
     </div>

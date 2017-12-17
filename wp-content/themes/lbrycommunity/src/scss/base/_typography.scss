@@ -1,30 +1,12 @@
-/*
-// Vertical Rhythm
-// -------------------------------------------------- */
-
-
-/* Variables
- * -------------------------------------------
- * Put your custom variables here. If you use bootstrap, use those
- * and add your own for vertical rhythm
- */
+.title-secondary {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
 
 $font-size-base : 16px;
 $line-height-base : 28px;
 
-/* TYPOGRAPHY BASE
-  * -------------------------------------------
-  * First, we establish a baseline to normalize typography.
-  * Credit: this BASE section is based on Twitter Bootstrap's type.less
-  * but with everything that isn't related to rhythm removed.
-  */
-
-
-/* Headings
-  * -------------------------------------------
-  * normalize baselines for headings, remove
-  * this block if you use Twitter Bootstrap
-  */
 
 h1,
 h2,
@@ -44,7 +26,7 @@ h1,
 h2 {
     margin-top: $line-height-base;
     margin-bottom: ($line-height-base / 2);
-    line-height: ($line-height-base * 2);
+    line-height: ($line-height-base * 1.5);
 }
 
 h3,
@@ -53,6 +35,7 @@ h5,
 h6 {
     margin-top: ($line-height-base / 2);
     margin-bottom: ($line-height-base / 2);
+    line-height: ($line-height-base * 1.5);
 }
 
 h1 {
@@ -88,18 +71,8 @@ h4 small {
     font-size: $font-size-base;
 }
 
-.title-secondary {
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.15em;
-}
 
 
-/* Lists
-  * -------------------------------------------
-  */
-
-// Unordered and Ordered lists
 ul,
 ol {
     padding: 0;
@@ -115,7 +88,7 @@ ol ul {
 
 li {
     line-height: $line-height-base;
-} // Description Lists
+}
 dl {
     margin-bottom: $line-height-base;
 }
@@ -127,29 +100,17 @@ dd {
 
 dd {
     margin-left: ($line-height-base / 2);
-} // MISC
-// ----
-// Horizontal rules
+}
+
 hr {
     margin: $line-height-base 0;
     border: 0;
-    border-top: 1px solid 1;
+    border-top: 1px solid;
     border-bottom: 1px solid #fff;
 }
 
 
-/* VERTICAL RHYTHM
-  * -------------------------------------------
-  * Add .rhythm to parent elements when you
-  * wish to apply vertical rhythm to child elements
-  */
-
-
-/* Body text & Misc
-  * -------------------------------------------
-  */
-
-.rhythm, .text-content {
+.rhythm {
     p,
     ul,
     ol,
@@ -165,16 +126,7 @@ hr {
 }
 
 
-/* Headings & paragraphs
-  * -------------------------------------------
-  * Here we apply special spacing to certain
-  * typographical patterns. It is impossible to
-  * predict the patterns you require for your
-  * project, so this is only a starting point.
-  */
-
-
-.rhythm, .text-content {
+.rhythm {
     h1,
     h2,
     h3 {
@@ -207,14 +159,8 @@ hr {
 }
 
 
-/* Lists
-  * -------------------------------------------
-  * Special classes for numbered, bulleted,
-  * and alpha lists.
-  */
 
-.rhythm, .text-content {
-    //
+.rhythm {
     h3+ul.bullet-list,
     h3+ul.numbered-list,
     h3+ul.alpha-list,
@@ -257,10 +203,6 @@ hr {
     }
 }
 
-
-/* Blockquotes
-  * -------------------------------------------
-  */
 
 .rhythm blockquote {
     padding: $line-height-base $line-height-base 0;
