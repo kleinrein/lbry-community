@@ -7,6 +7,7 @@
                 <h4 class="text-center mx-auto">Content freedom</h4>
                 <div class="flex">
                     <a href="https://lbry.io/get" class="btn--primary">Get LBRY</a>
+                    <a href="https://spee.ch" class="btn--secondary">Use Spee.ch</a>
                 </div>
                 <div class="ticker-wrapper">
                     <div class="ticker">

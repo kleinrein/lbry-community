@@ -28,6 +28,7 @@
                     <?php wp_nav_menu(array('menu' => 'full' ,'theme_location' => 'header', 'menu_class' => 'menu-full-screen-content')); ?>h
                     <?php get_search_form(); ?>
                 </div>
-                <button class="btn--nav">Menu</button>
+                <button class="btn--nav">Menu <span></span><span></span></button>
         </header>
+
     </div>
