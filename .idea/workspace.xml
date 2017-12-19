@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fd8616bd-e979-4d25-b06b-19584c06f99b" name="Default" comment="Better category template&#10;- More aligned with sketch&#10;- Basic flex layout">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-search.php" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-featured.php" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-featured.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-articles.php" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-articles.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_button.scss" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_button.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_menus.scss" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_menus.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_article.scss" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_article.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_slider.scss" afterPath="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_slider.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +18,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="page-home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -50,19 +71,15 @@
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/bower.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/.jshintrc" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/base/_nav.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_slider.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-articles.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/js/page-loader.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/js/responsive-menu.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/js/header.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/base/_core.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/comments.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-featured.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/base/_library.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/base/_typography.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_content.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-small.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/js/footer.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_flex.scss" />
@@ -74,12 +91,16 @@
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_article.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_menus.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_slider.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-articles.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_article.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-small.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_button.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-featured.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php" />
       </list>
     </option>
   </component>
@@ -142,6 +163,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="public" type="cbb8eebc:String" user="public" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,56 +206,6 @@
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="lbrycommunity" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="public" type="b2602c69:ProjectViewProjectNode" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lbrycommunity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="public" type="b2602c69:ProjectViewProjectNode" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lbrycommunity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="public" type="b2602c69:ProjectViewProjectNode" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lbrycommunity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="public" type="b2602c69:ProjectViewProjectNode" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lbrycommunity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="public" type="cbb8eebc:String" user="public" />
             </path>
           </expand>
           <select />
@@ -290,6 +272,7 @@
       <workItem from="1513535825290" duration="4273000" />
       <workItem from="1513610110740" duration="1646000" />
       <workItem from="1513623112599" duration="2820000" />
+      <workItem from="1513708652394" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="Updated README">
       <created>1508172478779</created>
@@ -316,7 +299,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63821000" />
+    <option name="totallyTimeSpent" value="67311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,8 +312,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19616205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19829424" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -415,13 +399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_slider.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -512,22 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-featured.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -638,16 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#31#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -672,34 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_menus.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="114" column="6" lean-forward="false" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -709,7 +636,7 @@
         <state relative-caret-position="320">
           <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
-            <element signature="e#6#55#0#PHP" expanded="true" />
+            <element signature="e#6#55#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -722,18 +649,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_slider.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_article.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="640">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <marker date="1513711343437" expanded="true" signature="189:195" ph=" " />
+            <marker date="1513711343437" expanded="true" signature="292:298" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/modules/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/scss/partials/_menus.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="114" column="6" lean-forward="false" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-small.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="336">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/content-single-featured.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/lbrycommunity/src/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
         </state>
       </provider>

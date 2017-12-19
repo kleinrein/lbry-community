@@ -10,7 +10,7 @@ Template Name: Home
         <div class="content-text--full-height">
             <h1 class="text-center mx-auto">Create, share, earn.</h1>
             <h4 class="text-center mx-auto">Content freedom</h4>
-            <div class="mx-auto">
+            <div class="flex">
                 <a href="https://lbry.io/get" class="btn--primary">Get LBRY</a>
                 <a href="https://spee.ch" class="btn--secondary">Use Spee.ch</a>
             </div>
@@ -41,7 +41,8 @@ Template Name: Home
         </article>
     </section>
 
-<?php get_footer(); ?>
+<?php
+    get_footer(); ?>
 <style>
     .section-intro {
         background:

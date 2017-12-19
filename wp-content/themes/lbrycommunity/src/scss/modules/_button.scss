@@ -44,6 +44,10 @@
       transform: translateY(-.25rem);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     }
+    &.active,
+    &:hover {
+      transform: translateY(-.25rem);
+    }
     span:first-child {
       &:before,
       &:after {
