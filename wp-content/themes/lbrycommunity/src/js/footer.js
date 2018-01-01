@@ -43,5 +43,11 @@
                 elasticity: 40
             })
         });
+
+        $(document).keypress(function(event) {
+            if (event.keyCode === 27) {
+                $(navBtn).trigger("click");
+            };
+        });
     });
 }(jQuery));

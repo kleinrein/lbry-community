@@ -7,7 +7,7 @@
     <title><?php wp_title('-', true, 'right'); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.11/tiny-slider.css">
     <?php wp_head(); ?>
 </head>
@@ -25,7 +25,7 @@
                     <div id="responsive-menu"><?php wp_nav_menu(array('theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline')); ?></div>
                 </nav>
                 <div class="menu-full-screen">
-                    <?php wp_nav_menu(array('menu' => 'full' ,'theme_location' => 'header', 'menu_class' => 'menu-full-screen-content')); ?>h
+                    <?php wp_nav_menu(array('menu' => 'full' ,'theme_location' => 'header', 'menu_class' => 'menu-full-screen-content')); ?>
                     <?php get_search_form(); ?>
                 </div>
                 <button class="btn--nav">Menu <span></span><span></span></button>
