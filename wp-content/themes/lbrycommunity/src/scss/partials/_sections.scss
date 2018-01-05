@@ -9,11 +9,21 @@
   width: 100% !important;
   left: 0;
   max-width: 100% !important;
-  height: 100vh;
+  max-height: 100vh;
   flex: 1;
   top: -13.5em;
   margin-bottom: -13.5em !important;
   position: relative;
+  .btn--primary,
+  .btn--secondary {
+    margin-top: 2rem;
+  }
+  .btn--primary {
+    margin-right: 1rem;
+  }
+  .btm--secondary {
+    margin-left: 1rem;
+  }
 }
 
 .section-air {
@@ -45,4 +55,8 @@
 .section-contact {
   height: 100vh;
   padding: 4em;
+}
+
+.section-contact {
+  background-color: #1C1C1C;
 }

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Displays archive
+ * @package lbry
+ */
+
 
 get_header(); ?>
 

@@ -1,8 +1,8 @@
 %btn {
   width: auto;
-  color: color(primary);
+  color: color(eden);
   background-color: transparent;
-  padding: .5em 2.25em;
+  padding: .65em 2.25em;
   margin: 2.5em auto;
   font-weight: 600;
   font-size: 1rem;
@@ -14,7 +14,8 @@
 .btn {
   &--primary {
     @extend %btn;
-    background: linear-gradient(180deg, #8F33B6 0%, #8F33B6 0.01%, #BA3DEE 98.9%);
+    background: linear-gradient(180deg, color(elf-green) 0%, color(eden) 100%);
+    background-color: color(eden);
     margin: .75em auto;
     font-size: 1rem;
     color: color(white);
@@ -27,7 +28,7 @@
     @extend %btn;
     margin: .75em auto;
     letter-spacing: 0.05em;
-    background-color: color(primary);
+    background: linear-gradient(180deg, #8F33B6 0%, #BA3DEE 100%);
     color: color(white);
   }
   &--nav {
@@ -42,7 +43,7 @@
     color: color(silver);
     right: 4rem;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+    transition: all 125ms ease-in-out;
     &:hover {
       transform: translateY(-.25rem);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);

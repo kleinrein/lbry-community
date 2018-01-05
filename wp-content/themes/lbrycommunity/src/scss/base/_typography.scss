@@ -26,7 +26,7 @@ h1,
 h2 {
     margin-top: $line-height-base;
     margin-bottom: ($line-height-base / 2);
-    line-height: ($line-height-base * 1.5);
+    line-height: ($line-height-base * 2);
 }
 
 h3,
@@ -40,13 +40,17 @@ h6 {
 
 h1 {
     font-size: $font-size-base * 2.75;
+    font-weight: 600;
+    letter-spacing: 3px;
 } // ~38px
 h2 {
     font-size: $font-size-base * 1.875;
     font-weight: 300;
+    letter-spacing: 2px;
 } // ~32px
 h3 {
-    font-size: $font-size-base * 1.75;
+    font-size: $font-size-base * 1.5;
+    font-weight: 300;
 } // ~24px
 h4 {
     font-size: $font-size-base * 1.25;
@@ -111,6 +115,13 @@ hr {
     border-bottom: 1px solid #fff;
 }
 
+// Helpers
+.text-gradient {
+    background: -webkit-linear-gradient(#F48A43, #9935C3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 30rem;
+}
 
 .rhythm {
     p,

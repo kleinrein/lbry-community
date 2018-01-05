@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying search results pages.
+ * Display search results
+ * @package lbry
  */
 get_header(); ?>
 
