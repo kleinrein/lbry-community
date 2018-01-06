@@ -38,6 +38,9 @@
   justify-content: flex-end;
   position: relative;
   top: 20vh;
+  a {
+    text-decoration: none;
+  }
   .ticker-title {
     color: #717171;
     margin: 0;

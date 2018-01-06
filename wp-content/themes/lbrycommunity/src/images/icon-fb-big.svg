@@ -1,0 +1,20 @@
+<svg width="103" height="103" viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon-fb-big</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-552 -16902)">
+<g id="icon-fb-big">
+<g id="Rectangle 10">
+<use xlink:href="#path0_fill" transform="translate(552 16902)" fill="#2B2B2B"/>
+</g>
+<g id="facebook">
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(586.408 16920.6)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 10C 0 4.47715 4.47715 0 10 0L 93 0C 98.5229 0 103 4.47715 103 10L 103 93C 103 98.5229 98.5229 103 93 103L 10 103C 4.47715 103 0 98.5229 0 93L 0 10Z"/>
+<path id="path1_fill" d="M 22.1861 65.7365L 22.1861 16.5985C 22.1861 13.1473 23.1721 10.8465 27.938 10.8465L 34.183 10.8465L 34.183 0.493024C 33.0326 0.328682 29.4171 0 25.1442 0C 16.2698 0 10.1892 5.42326 10.1892 15.4481L 10.1892 65.7365L 22.1861 65.7365ZM 33.69 23.9938L 0 23.9938L 0 35.8264L 32.2109 35.8264"/>
+</defs>
+</svg>

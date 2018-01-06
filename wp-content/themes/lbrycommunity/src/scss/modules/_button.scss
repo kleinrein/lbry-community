@@ -9,6 +9,8 @@
   display: inline-block;
   text-decoration: none;
   border-radius: 2em;
+  transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+  transform-origin: bottom;
 }
 
 .btn {
@@ -21,7 +23,11 @@
     color: color(white);
     letter-spacing: 0.05em;
     &:hover {
+      transform: translateY(-4px);
       text-shadow: 1px 1px rgba(0,0,0,.5);
+    }
+    &:active {
+      transform: translateY(-2px) scale(1, 1.1);
     }
   }
   &--secondary {
@@ -30,6 +36,12 @@
     letter-spacing: 0.05em;
     background: linear-gradient(180deg, #8F33B6 0%, #BA3DEE 100%);
     color: color(white);
+    &:hover {
+      transform: translateY(-4px);
+    }
+    &:active {
+      transform: translateY(-2px) scale(1, 1.1);
+    }
   }
   &--nav {
     z-index: 10;
