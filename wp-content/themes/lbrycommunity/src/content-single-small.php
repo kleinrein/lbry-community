@@ -29,21 +29,15 @@
         }
         ?>
 
-        <h3><a href="<?php the_permalink(); ?>" class="category-title-link"><?php the_title(); ?></a></h3>
-
+        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
         <div class="category-post">
             <div class="article-meta-extra">
                 <h6>
                     <?php
-                    if (has_category() && !has_category('Uncategorized')) {
-                        the_category('  |  ');
-                        echo " | ";
-                    }
-
-                    the_date(get_option('date_format'));
-                    the_time(get_option('time_format'));
-                    echo " by ";
-                    the_author_posts_link();
+                        echo "By ";
+                        the_author_posts_link();
+                        echo ", ";
+                        echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
                     ?>
                 </h6>
             </div>

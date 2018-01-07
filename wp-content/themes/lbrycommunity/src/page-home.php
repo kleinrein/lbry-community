@@ -18,7 +18,8 @@
             </div>
         </div>
         <div class="ticker-wrapper">
-            <a target="_blank" href="https://coinmarketcap.com/currencies/library-credit/" title="Price taken from Coinmarketcap.com">
+            <a target="_blank" href="https://coinmarketcap.com/currencies/library-credit/"
+               title="Price taken from Coinmarketcap.com">
                 <div class="ticker">
                     <p class="ticker-title">LBRY Credits</p>
                     <p class="ticker-price">
@@ -51,19 +52,25 @@
         <h1 class="text-gradient text-center">BE PART OF OUR FRIENDLY COMMUNITY</h1>
 
         <div class="flex center margin-top margin-bottom">
-            <div class="box-dark">
-                <p>Follow us on twitter</p>
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-big.svg" alt="twitter icon">
-            </div>
-            <div class="box-dark">
-                <p>Like our page on Facebook</p>
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-big.svg" alt="facebook icon">
-            </div>
+            <a target="_blank" href="https://twitter.com/LBRYCommunity">
+                <div class="box-dark">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-big.svg"
+                         alt="twitter icon">
+                    <small class="box-dark-text">Follow us on twitter</small>
+                </div>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/lbrycommunity/">
+                <div class="box-dark">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-big.svg" alt="facebook icon">
+                    <small class="box-dark-text">Like our page on Facebook</small>
+                </div>
+            </a>
         </div>
 
         <h2 class="text-center">Contact us</h2>
         <p class="text-center">Send us an email or go to the Discord-chat and contact @rouse#1378</p>
-        <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
+        <img class="img-small margin-top aligncenter"
+             src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
     </div>
 </section>
 
@@ -109,6 +116,6 @@
         window.setInterval(function () {
             console.count('interval');
             updateTicker()
-        }, 20000)
+        }, 15000)
     }
 </script>

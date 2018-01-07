@@ -55,7 +55,9 @@ add_action('widgets_init', 'voidx_widgets_init');
 
 function post_single_small($category, $posts_per_page = 4)
 {
-    echo "<h3 class='text-center title-secondary'>$category articles</h3>";
+    $category = ucfirst($category);
+
+    echo "<h2 class='text-center'>$category articles</h2>";
 
     $query = new WP_Query(array(
         'posts_per_page' => $posts_per_page,
