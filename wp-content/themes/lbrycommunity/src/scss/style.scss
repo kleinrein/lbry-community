@@ -29,7 +29,8 @@ Domain Path: #{metadata(theme-text-domain-path)}
 // Base
 @import "base/core";
 @import "base/nav";
-@import "base/_typography";
+@import "base/typography";
+@import "base/media";
 
 // Modules
 @import "modules/button";

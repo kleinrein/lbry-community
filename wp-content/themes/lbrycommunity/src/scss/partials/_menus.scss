@@ -49,6 +49,12 @@
   color: color(silver);
 }
 
+.menu-main {
+  @include phone {
+    display: none;
+  }
+}
+
 // Full screen menu
 body.full-menu-visible {
   overflow: hidden;
@@ -64,6 +70,9 @@ body.full-menu-visible {
   background: radial-gradient(100vh at 50% 50%, #262626 0%, #1A1A1A 100%);
   transform: scale(0.5);
   opacity: 0;
+  @include phone {
+
+  }
   ul {
     background-color: color(mine-shaft);
     box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.1);

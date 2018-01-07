@@ -21,7 +21,7 @@
                     </a>
                 </div>
                 <div class="col"></div>
-                <nav id="site-navigation" class="site-navigation col">
+                <nav class="menu-main">
                     <div id="responsive-menu"><?php wp_nav_menu(array('theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline')); ?></div>
                 </nav>
                 <div class="menu-full-screen">

@@ -50,7 +50,7 @@
     <div class="container">
         <h1 class="text-gradient text-center">BE PART OF OUR FRIENDLY COMMUNITY</h1>
 
-        <div class="flex center">
+        <div class="flex center margin-top margin-bottom">
             <div class="box-dark">
                 <p>Follow us on twitter</p>
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-big.svg" alt="twitter icon">
@@ -63,6 +63,7 @@
 
         <h2 class="text-center">Contact us</h2>
         <p class="text-center">Send us an email or go to the Discord-chat and contact @rouse#1378</p>
+        <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
     </div>
 </section>
 
