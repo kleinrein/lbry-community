@@ -72,6 +72,7 @@ function post_single_small($category, $posts_per_page = 4)
             get_template_part('content', 'single-small');
         }
         echo '</div>';
+        echo '<a href="#" class="btn--ghost">More articles</a>';
     }
     echo '</div>';
 }

@@ -13,13 +13,12 @@
             </figure>
             <?php
         } else {
-            // No post thumbnail, try attachments instead.
             $images = get_posts(
                 array(
                     'post_type' => 'attachment',
                     'post_mime_type' => 'image',
                     'post_parent' => $post->ID,
-                    'posts_per_page' => 1, /* Save memory, only need one */
+                    'posts_per_page' => 1,
                 )
             );
 

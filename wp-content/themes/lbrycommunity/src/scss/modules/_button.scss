@@ -43,6 +43,14 @@
       transform: translateY(-2px) scale(1, 1.1);
     }
   }
+  &--ghost {
+    @extend %btn;
+    border: 2px solid color(eden);
+    color: color(text);
+    &:hover {
+      background-color: color(eden);
+    }
+  }
   &--nav {
     z-index: 10;
     cursor: pointer;
