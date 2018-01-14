@@ -1,0 +1,12 @@
+<svg width="15" height="29" viewBox="0 0 15 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon-fb-small</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-3478 -13147)">
+<g id="icon-fb-small">
+<use xlink:href="#path0_fill" transform="translate(3478.03 13147.1)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 9.69294 28.7198L 9.69294 7.25176C 9.69294 5.74397 10.1237 4.73877 12.2059 4.73877L 14.9343 4.73877L 14.9343 0.215399C 14.4317 0.143599 12.8521 0 10.9853 0C 7.10816 0 4.45157 2.36939 4.45157 6.74916L 4.45157 28.7198L 9.69294 28.7198ZM 14.7189 10.4827L 0 10.4827L 0 15.6523L 14.0727 15.6523"/>
+</defs>
+</svg>

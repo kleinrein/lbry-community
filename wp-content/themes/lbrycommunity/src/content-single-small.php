@@ -6,27 +6,15 @@
 
 ?>
 <div class="col col-3-of-12">
-    <article class="article-wrapper--small">
-        <?php if (has_post_thumbnail()) { ?>
-            <figure class="article-preview-image">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-            </figure>
-            <?php
-        } else {
-            $images = get_posts(
-                array(
-                    'post_type' => 'attachment',
-                    'post_mime_type' => 'image',
-                    'post_parent' => $post->ID,
-                    'posts_per_page' => 1,
-                )
-            );
-
-            if ($images) {
-                echo '<img src="' . wp_get_attachment_image_src($images[0]->ID, 'post-thumbnail') . '" alt="" />';
-            }
-        }
-        ?>
+    <article data-tilt class="article-wrapper article--small">
+            <a href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()) { ?>
+                    <div class="article-preview-image--small img-bg"
+                         style="background: url(<?php the_post_thumbnail_url(); ?>) no-repeat center center;"></div>
+                <?php } else { ?>
+                    <div class="article-preview-image--none-small"></div>
+                <?php } ?>
+            </a>
 
         <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
         <div class="category-post">
@@ -42,7 +30,7 @@
             </div>
 
             <p class="four-lines">
-                <?php echo substr(strip_tags(get_the_excerpt(), 2), 0, 100) . '...'; ?>
+                <?php the_field('description'); ?>
             </p>
         </div>
         <?php if (has_tag()) { ?>

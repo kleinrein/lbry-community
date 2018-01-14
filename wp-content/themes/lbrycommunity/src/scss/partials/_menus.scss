@@ -109,6 +109,12 @@ body.full-menu-visible {
       display: none;
       margin-bottom: 1rem;
     }
+    label {
+      @include phone {
+        display: block;
+        width: 90%;
+      }
+    }
     input[type="search"] {
       @extend .flex--item;
       background-color: color(cod-grey);
@@ -137,6 +143,10 @@ body.full-menu-visible {
       cursor: pointer;
       &:hover {
         background-color: color(eden);
+      }
+      @include phone {
+        display: block;
+        width: 100%;
       }
     }
   }

@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: andreasrein
- * Date: 30.09.2017
- * Time: 21.16
+ * Display a single post
+ * @package lbry
  */
 get_header();
 ?>
+
     <main class="content" tabindex="-1" role="main">
         <?php while (have_posts()) : the_post(); ?>
 

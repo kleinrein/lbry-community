@@ -3,16 +3,7 @@
   margin: 0 auto;
 }
 
-.section-air {
-  margin: 6em auto !important;
-  &:first-of-type {
-    margin-top: 0;
-    margin-bottom: 6rem;
-  }
-}
-
 .content-text {
-  @extend .rhythm;
   max-width: 760px;
   margin: 4em auto;
   &--full-height {
@@ -22,6 +13,10 @@
   a {
     color: color(blue);
   }
+}
+
+.air {
+  padding: 4rem 0;
 }
 
 .text-content-part {

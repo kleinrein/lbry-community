@@ -52,10 +52,11 @@ function voidx_widgets_init()
 
 add_action('widgets_init', 'voidx_widgets_init');
 
-
 function post_single_small($category, $posts_per_page = 4)
 {
     $category = ucfirst($category);
+    $category_id = get_cat_ID($category);
+    $link = get_category_link($category_id);
 
     echo "<h2 class='text-center'>$category articles</h2>";
 
@@ -72,7 +73,7 @@ function post_single_small($category, $posts_per_page = 4)
             get_template_part('content', 'single-small');
         }
         echo '</div>';
-        echo '<a href="#" class="btn--ghost">More articles</a>';
+        echo '<a href="' . $link . '" class="btn--ghost">More articles</a>';
     }
     echo '</div>';
 }

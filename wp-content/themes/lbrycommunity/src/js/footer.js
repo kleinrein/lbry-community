@@ -49,5 +49,8 @@
                 $(navBtn).trigger("click");
             };
         });
+
+        // AOS
+        AOS.init();
     });
 }(jQuery));

@@ -9,8 +9,8 @@
 <!-- Intro section -->
 <section class="container center section-intro">
     <div class="content-text--full-height">
-        <h1 class="text-center mx-auto"><?php bloginfo('name'); ?></h1>
-        <h3 class="text-center mx-auto"><?php bloginfo('description') ?></h3>
+        <h1 class="text-center mx-auto"><?php the_field('title'); ?></h1>
+        <h3 class="text-center mx-auto"><?php the_field('description'); ?></h3>
         <div class="container center flex">
             <div>
                 <a href="https://lbry.io/get" class="btn--primary">Get LBRY</a>
@@ -34,7 +34,12 @@
 <section class="container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="content-text" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="entry-content">
+            <div data-aos="fade"
+                 data-aos-delay="200"
+                 data-aos-duration="400"
+                 data-aos-easing="ease"
+                 data-aos-once="true"
+                 class="entry-content air">
                 <?php the_content(); ?>
                 <?php
                 wp_link_pages(array(
@@ -48,27 +53,27 @@
 </section>
 
 <section class="section-contact">
-    <div class="container">
-        <h1 class="text-gradient text-center">BE PART OF OUR FRIENDLY COMMUNITY</h1>
+    <div class="container air">
+        <h1 class="text-gradient text-center"><?php the_field('gradient_text'); ?></h1>
 
         <div class="flex center margin-top margin-bottom">
             <a target="_blank" href="https://twitter.com/LBRYCommunity">
                 <div class="box-dark">
                     <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-big.svg"
                          alt="twitter icon">
-                    <small class="box-dark-text">Follow us on twitter</small>
+                    <small class="box-dark-text"><?php the_field('twitter'); ?></small>
                 </div>
             </a>
             <a target="_blank" href="https://www.facebook.com/lbrycommunity/">
                 <div class="box-dark">
                     <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-big.svg" alt="facebook icon">
-                    <small class="box-dark-text">Like our page on Facebook</small>
+                    <small class="box-dark-text"><?php the_field('facebook'); ?></small>
                 </div>
             </a>
         </div>
 
-        <h2 class="text-center">Contact us</h2>
-        <p class="text-center">Send us an email or go to the Discord-chat and contact @rouse#1378</p>
+        <h2 class="text-center"><?php the_field('contact_title'); ?></h2>
+        <p class="text-center"><?php the_field('contact_description'); ?></p>
         <img class="img-small margin-top aligncenter"
              src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
     </div>
@@ -79,9 +84,10 @@
     .section-intro {
         background: linear-gradient(
                 rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.5)
+                rgba(0, 0, 0, 0.6)
         ),
         url("<?php echo get_bloginfo('template_url') ?>/images/forest.jpg");
+        background-size: cover;
     }
 </style>
 
