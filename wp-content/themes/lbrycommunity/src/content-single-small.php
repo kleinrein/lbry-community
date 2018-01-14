@@ -6,7 +6,7 @@
 
 ?>
 <div class="col col-3-of-12">
-    <article data-tilt class="article-wrapper article--small">
+    <article class="article-wrapper article--small">
             <a href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()) { ?>
                     <div class="article-preview-image--small img-bg"

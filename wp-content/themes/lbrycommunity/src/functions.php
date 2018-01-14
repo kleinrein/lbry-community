@@ -59,10 +59,12 @@ function post_single_small($category, $posts_per_page = 4)
     $link = get_category_link($category_id);
 
     echo "<h2 class='text-center'>$category articles</h2>";
+    echo "<div class='margin-bottom-1'>&nbsp;</div>";
 
     $query = new WP_Query(array(
         'posts_per_page' => $posts_per_page,
         'category_name' => $category,
+        'orderby' => 'date'
     ));
 
     echo '<div class="grid full-width margin-bottom">';
@@ -74,6 +76,7 @@ function post_single_small($category, $posts_per_page = 4)
         }
         echo '</div>';
         echo '<a href="' . $link . '" class="btn--ghost">More articles</a>';
+        echo "<div class='margin-bottom'>&nbsp;</div>";
     }
     echo '</div>';
 }

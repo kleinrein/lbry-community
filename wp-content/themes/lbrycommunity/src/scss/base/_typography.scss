@@ -112,7 +112,7 @@ hr {
     margin: $line-height-base 0;
     border: 0;
     border-top: 1px solid;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255,255,255,.25);
 }
 
 // Helpers

@@ -32,39 +32,36 @@
                 ?>
             </h6>
         </div>
+        <?php edit_post_link('Edit', '<p>', '</p>'); ?>
         <div class="margin-bottom"></div>
-
         <?php the_field('description'); ?>
-
         <?php the_content(); ?>
-        <?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 
-
-        <?php if (has_tag()) echo '<p>Tags:</p>';
-        the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 
         <p>Categories:</p>
         <ul>
             <li><?php the_category('</li><li>') ?></li>
         </ul>
 
-        <?php if (comments_open() && pings_open()) { ?>
-            <p><a href="#respond" title="Contribute to the discussion">Leave a comment</a> or <a
-                        href="<?php trackback_url(); ?>" title="Send a notification when you link to this page">send a
-                    trackback</a> from your own site.</p>
+        <hr>
 
-        <?php } elseif (!comments_open() && pings_open()) { ?>
-            <p>Comments are closed, but you can <a href="<?php trackback_url(); ?>"
-                                                   title="Send a notification when you link to this page">send a
-                    trackback</a> from your own site.</p>
+        <h2>Related articles</h2>
+        <?php
+        $category = get_the_category();
+        $query = new WP_Query(array(
+            'posts_per_page' => 3,
+            'category_name' => esc_html($category[0]->name),
+            'orderby' => 'date'
+        ));
 
-        <?php } elseif (comments_open() && !pings_open()) { ?>
-            <p><a href="#respond" title="Contribute to the discussion">Leave a comment</a>.</p>
-
-        <?php } elseif (!comments_open() && !pings_open()) { ?>
-            <p>Comments are closed.</p>
-
-        <?php }
-        edit_post_link('Edit', '<p>', '</p>'); ?>
+        if ($query->have_posts()) {
+            echo '<div class="row">';
+            while($query->have_posts()) {
+                $query->the_post();
+                get_template_part('content', 'single-small-simple');
+            }
+            echo '</div>';
+        }
+        ?>
     </div>
 </article>

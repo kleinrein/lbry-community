@@ -3,7 +3,7 @@
     <main class="content">
         <div class="grid">
             <?php if (have_posts()) : ?>
-            <h1 class="page-content-title"><?php single_cat_title(__(''), true); ?></h1>
+            <h1 class="text-center"><?php single_cat_title(__(''), true); ?></h1>
 
             <div class="row">
                 <?php while (have_posts()) : the_post(); ?>
