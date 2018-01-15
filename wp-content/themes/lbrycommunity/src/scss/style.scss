@@ -29,6 +29,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "base/nav";
 @import "base/typography";
 @import "base/media";
+@import "base/mixins";
 
 // Modules
 @import "modules/button";

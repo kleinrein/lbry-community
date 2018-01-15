@@ -76,6 +76,9 @@
   text-align: center;
   position: relative;
   transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+  @include phone {
+    padding: 2rem;
+  }
   .box-dark-text {
     transition: all 600ms cubic-bezier(.01, .85, .10, 1);
     position: absolute;
@@ -98,6 +101,9 @@
     }
     .box-dark-text {
       opacity: 1;
+      @include phone {
+        opacity: 0;
+      }
     }
   }
 }

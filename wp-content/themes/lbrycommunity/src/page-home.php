@@ -31,7 +31,7 @@
     </div>
 </section>
 
-<section class="container">
+<section class="container margin-bottom">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="content-text" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div data-aos="fade"

@@ -28,14 +28,11 @@ $grid-max-width: 90% !default;
 $pushes: true !default;
 $pulls: true !default;
 
-// Breakpoints. Structure:
-// name: (screen-width, column-amounts)
 $breakpoints: (
         m: (840px, (4, 6, 8)),
         s: (480px, (4, 6)),
 ) !default;
 
-// Actual css, change this at your own risk
 
 .#{$container-classname} {
   width: $grid-width;
@@ -85,7 +82,7 @@ $breakpoints: (
 
 .w-auto {
   flex: 1;
-  width:100%;
+  width: 100%;
 }
 
 @each $col-am in $grid-columns {
@@ -94,26 +91,20 @@ $breakpoints: (
     .#{$column-classname}-#{$i}-of-#{$col-am} {
       width: calc(#{percentage($i/$col-am)} - #{$gutter-width});
     }
-    // end width
 
     @if ($pushes) {
       .push-#{$i}-of-#{$col-am} {
         margin-left: calc(#{percentage($i/$col-am)} + #{$gutter-width} / 2);
       }
     }
-    // end pushes
 
     @if ($pulls) {
       .pull-#{$i}-of-#{$col-am} {
         margin-right: calc(#{percentage($i/$col-am)} + #{$gutter-width} / 2);
       }
     }
-    // end pulls
   }
-  // end for
 }
-
-// end each
 
 @each $bp in $breakpoints {
   $bp-name: nth($bp, 1);
@@ -140,25 +131,20 @@ $breakpoints: (
         .#{$column-classname}-#{$bp-name}-#{$i}-of-#{$col-am} {
           width: calc(#{percentage($i/$col-am)} - #{$gutter-width});
         }
-        // end width
 
         @if ($pushes) {
           .push-#{$bp-name}-#{$i}-of-#{$col-am} {
             margin-left: calc(#{percentage($i/$col-am)} + #{$gutter-width} / 2);
           }
         }
-        // end pushes
 
         @if ($pulls) {
           .pull-#{$bp-name}-#{$i}-of-#{$col-am} {
             margin-right: calc(#{percentage($i/$col-am)} + #{$gutter-width} / 2);
           }
         }
-        // end pulls
       }
-      // end for
     }
-    // end each
   }
 }
 

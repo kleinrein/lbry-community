@@ -105,6 +105,9 @@ body.full-menu-visible {
     text-align: center;
     max-width: 600px;
     margin-top: 10rem;
+    @include phone {
+      margin-top: 4rem;
+    }
     span.screen-reader-text {
       display: none;
       margin-bottom: 1rem;
@@ -131,6 +134,11 @@ body.full-menu-visible {
       &:focus {
         background-color: darken(color(cod-grey), 5%);
       }
+      @include phone {
+        @include centerer(true, true);
+        padding: .75rem;
+        top: -.5rem;
+      }
     }
     .search-submit {
       @extend .flex--item;
@@ -145,8 +153,11 @@ body.full-menu-visible {
         background-color: color(eden);
       }
       @include phone {
+        @include centerer(true, true);
+        padding: .75rem;
         display: block;
-        width: 100%;
+        width: 90%;
+        top: 4rem;
       }
     }
   }

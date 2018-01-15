@@ -5,22 +5,24 @@
  */
 ?>
 
+<div class="article-control-center">
+    <?php $page = get_page_by_title('Articles'); ?>
+    <a href="<?php echo get_page_link($page->ID); ?>" class="btn--dark">&#8592;&nbsp;&nbsp;Go back to articles</a>
+    <div class="article-control-center-social">
+        <p class="text-center"><b>Share on social media:</b></p>
+        <div class="margin-top-1"></div>
+        <div>
+            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-small.svg" alt=""></button>
+            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-reddit-small.svg" alt=""></button>
+            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-small.svg" alt=""></button>
+            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-tumblr-small.svg" alt=""></button>
+        </div>
+    </div>
+</div>
+
 <article class="article--single">
     <div class="content-text">
         <h1 class="entry-title"><?php if (the_title('', '', false) != '') the_title(); else echo 'Untitled'; ?></h1>
-
-        <div class="article-control-center">
-            <?php $page = get_page_by_title('Articles'); ?>
-            <a href="<?php echo get_page_link($page->ID); ?>" class="btn--dark">&#8592;&nbsp;&nbsp;Go back to articles</a>
-            <div>
-                <p class="text-center"><b>Share on social media:</b></p>
-                <div class="margin-top-1"></div>
-                <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-small.svg" alt=""></button>
-                <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-reddit-small.svg" alt=""></button>
-                <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-small.svg" alt=""></button>
-                <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-tumblr-small.svg" alt=""></button>
-            </div>
-        </div>
 
         <div class="article-meta-extra">
             <h6>
@@ -38,8 +40,8 @@
         <?php the_content(); ?>
 
 
-        <p>Categories:</p>
-        <ul>
+        <p><b>Categories:</b></p>
+        <ul class="article-categories">
             <li><?php the_category('</li><li>') ?></li>
         </ul>
 
