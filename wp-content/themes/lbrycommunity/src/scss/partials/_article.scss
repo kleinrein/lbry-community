@@ -44,8 +44,6 @@ article {
       box-shadow: 1px 5px 1.5rem rgba(0, 0, 0, .2);
     }
   }
-  &--single {
-  }
   &--dark {
     @extend %article;
     background: #1F1F1F;
@@ -61,8 +59,38 @@ article {
       box-shadow: 1px 1rem 1rem rgba(0, 0, 0, .25);
     }
   }
+  &--single {
+    .article-meta-extra {
+      color: color(silver);
+      margin-bottom: 4rem;
+    }
+    .preamble {
+      font-size: 1.5rem;
+    }
+    .article-categories a {
+      text-decoration: none;
+      color: color(text);
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    hr {
+      color: rgba(255,255,255,.2);
+      transform: scale(1.1, 1);
+    }
+  }
   &--featured {
     color: color(text);
+    h2 {
+      margin-bottom: 0 !important;
+    }
+    .article--featured-description {
+      margin: .25rem 0;
+    }
+    .article-meta-extra {
+      opacity: .75;
+    }
     a {
       text-decoration: none;
       color: color(text);
@@ -71,26 +99,17 @@ article {
 }
 
 .article-control-center {
-  background-color: #242424;
-  border: 1px solid #212121;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-  position: relative;
-  border-radius: 1rem;
-  padding: 1rem;
-  a {
+  p {
+    opacity: .5;
+  }
+  .btn--icon {
     margin: 0 auto;
     display: block;
     text-align: center;
-  }
-  .article-control-center-social {
-    margin-top: 2rem;
-    div {
-      margin: 0 auto;
-      display: flex;
-      button {
-        flex: 1;
-        margin: 1rem;
-      }
+    display: inline-block;
+    box-shadow: 1px 5px 5px rgba(0,0,0,.15);
+    &:nth-child(n+4) {
+      margin-left: .5rem;
     }
   }
 }
@@ -160,4 +179,5 @@ article {
   border: 1px solid #77219B;
   padding: .2rem .5rem;
   border-radius: 5px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,.25);
 }

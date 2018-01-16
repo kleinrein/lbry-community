@@ -39,6 +39,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 
 // Partials
 @import "partials/article";
+@import "partials/breadcrumbs";
 @import "partials/sections";
 @import "partials/helpers";
 @import "partials/ticker";

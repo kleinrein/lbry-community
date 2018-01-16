@@ -70,10 +70,7 @@ body.full-menu-visible {
   background: radial-gradient(100vh at 50% 50%, #262626 0%, #1A1A1A 100%);
   transform: scale(0.5);
   opacity: 0;
-  @include phone {
-
-  }
-  ul {
+  #menu-full {
     background-color: color(mine-shaft);
     box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.1);
     bottom: 0;
@@ -90,6 +87,9 @@ body.full-menu-visible {
       font-size: 2rem;
       line-height: 4rem;
       font-weight: 400;
+      @include phone {
+        font-size: 1.5rem;
+      }
     }
   }
   &.active {
@@ -106,7 +106,7 @@ body.full-menu-visible {
     max-width: 600px;
     margin-top: 10rem;
     @include phone {
-      margin-top: 4rem;
+      margin-top: 12rem;
     }
     span.screen-reader-text {
       display: none;
@@ -138,6 +138,7 @@ body.full-menu-visible {
         @include centerer(true, true);
         padding: .75rem;
         top: -.5rem;
+        width: 90%;
       }
     }
     .search-submit {

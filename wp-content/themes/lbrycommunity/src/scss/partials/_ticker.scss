@@ -41,6 +41,9 @@
   a {
     text-decoration: none;
   }
+  @include phone {
+    top: 5vh;
+  }
   .ticker-title {
     color: #717171;
     margin: 0;

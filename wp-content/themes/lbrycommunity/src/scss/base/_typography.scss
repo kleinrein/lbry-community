@@ -4,9 +4,8 @@
     letter-spacing: 0.15em;
 }
 
-$font-size-base : 16px;
-$line-height-base : 28px;
-
+$font-size-base : 18px;
+$line-height-base : 30px;
 
 h1,
 h2,
@@ -78,7 +77,6 @@ h4 small {
 }
 
 
-
 ul,
 ol {
     padding: 0;
@@ -123,17 +121,6 @@ hr {
     max-width: 32rem;
 }
 
-.rhythm {
-    p,
-    ul,
-    ol,
-    blockquote,
-    address,
-    pre,
-    form {
-        margin-bottom: $line-height-base; // And remove margin from last element
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+.text-bold {
+    font-weight: 600;
 }

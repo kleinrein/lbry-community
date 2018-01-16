@@ -5,47 +5,55 @@
  */
 ?>
 
-<div class="article-control-center">
-    <?php $page = get_page_by_title('Articles'); ?>
-    <a href="<?php echo get_page_link($page->ID); ?>" class="btn--dark">&#8592;&nbsp;&nbsp;Go back to articles</a>
-    <div class="article-control-center-social">
-        <p class="text-center"><b>Share on social media:</b></p>
-        <div class="margin-top-1"></div>
-        <div>
-            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-small.svg" alt=""></button>
-            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-reddit-small.svg" alt=""></button>
-            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-small.svg" alt=""></button>
-            <button class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-tumblr-small.svg" alt=""></button>
-        </div>
-    </div>
-</div>
+<?php
+global $wp;
+$current_url = home_url(add_query_arg(array(), $wp->request));
+?>
 
 <article class="article--single">
     <div class="content-text">
+        <?php edit_post_link('Edit', '<p title="Edit article">', '</p>'); ?>
         <h1 class="entry-title"><?php if (the_title('', '', false) != '') the_title(); else echo 'Untitled'; ?></h1>
+        <div class="preamble">
+            <?php the_field('description');
+            ?>
+        </div>
 
         <div class="article-meta-extra">
-            <h6>
+            <h6 class="text-bold">
                 <?php
                 echo "By ";
                 the_author_posts_link();
                 echo ", ";
-                echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
+                echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago';
                 ?>
             </h6>
         </div>
-        <?php edit_post_link('Edit', '<p>', '</p>'); ?>
-        <div class="margin-bottom"></div>
-        <?php the_field('description'); ?>
-        <?php the_content(); ?>
-
-
-        <p><b>Categories:</b></p>
-        <ul class="article-categories">
-            <li><?php the_category('</li><li>') ?></li>
-        </ul>
 
         <hr>
+        <div class="article-categories">
+            <?php the_category('</span>&nbsp;&sext;&nbsp;<span>') ?>
+        </div>
+        <hr>
+
+        <div class="margin-bottom"></div>
+        <?php the_content(); ?>
+        <hr>
+
+        <div class="article-control-center margin-bottom">
+            <p><b>Share</b></p>
+            <div class="margin-top-1"></div>
+            <a class="btn--icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url; ?>">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-small.svg" alt="">
+            </a>
+            <a class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-reddit-small.svg"
+                                      alt=""></a>
+            <a class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-small.svg"
+                                      alt=""></a>
+            <a class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-tumblr-small.svg"
+                                      alt=""></a>
+        </div>
+
 
         <h2>Related articles</h2>
         <?php
@@ -58,7 +66,7 @@
 
         if ($query->have_posts()) {
             echo '<div class="row">';
-            while($query->have_posts()) {
+            while ($query->have_posts()) {
                 $query->the_post();
                 get_template_part('content', 'single-small-simple');
             }

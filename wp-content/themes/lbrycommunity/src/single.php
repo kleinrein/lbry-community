@@ -5,9 +5,10 @@
  */
 get_header();
 ?>
-
     <main class="content" tabindex="-1" role="main">
         <?php while (have_posts()) : the_post(); ?>
+
+            <?php the_breadcrumb(); ?>
 
             <?php get_template_part('content', 'single'); ?>
 

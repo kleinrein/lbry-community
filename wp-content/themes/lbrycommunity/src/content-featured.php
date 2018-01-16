@@ -39,10 +39,10 @@ if ($posts) {
                     <div class="category-featured">
                         <span>Featured</span>
                     </div>
-                    <h2><?php echo $title; ?></h2>
-                    <p><?php echo $description; ?></p>
+                    <h2 class="text-bold"><?php echo $title; ?></h2>
+                    <p class="article--featured-description"><?php echo $description; ?></p>
                     <div class="article-meta-extra">
-                        <h6>
+                        <h6 class="text-bold">
                             <?php
                             echo "By ";
                             the_author_meta('user_nicename', $author_id);
