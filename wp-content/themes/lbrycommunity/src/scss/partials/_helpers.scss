@@ -77,7 +77,7 @@
   position: relative;
   transition: all 600ms cubic-bezier(.01, .85, .10, 1);
   @include phone {
-    padding: 2rem;
+    padding: 20px;
   }
   .box-dark-text {
     transition: all 600ms cubic-bezier(.01, .85, .10, 1);

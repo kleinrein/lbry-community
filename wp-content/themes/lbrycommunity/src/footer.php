@@ -1,7 +1,7 @@
 </div>
 <footer>
-    <div class="content">
-        <nav id="site-footer-navigation">
+    <div class="container">
+        <nav>
             <?php wp_nav_menu(array('theme_location' => 'footer', 'menu_id' => 'menu-footer', 'menu_class' => 'menu-inline')); ?>
         </nav>
     </div>

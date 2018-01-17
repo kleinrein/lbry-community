@@ -4,31 +4,47 @@
  * @package lbry
  */
 
-$posts = get_posts(array(
-    'meta_query' => array(
-        array(
-            'key' => 'featured',
-            'value' => '"featured"',
-            'compare' => 'LIKE'
+
+if (!isset($category)) {
+    $posts = get_posts(array(
+        'meta_query' => array(
+            array(
+                'key' => 'featured',
+                'value' => '"featured"',
+                'compare' => 'LIKE'
+            )
         )
-    )
-));
+    ));
+} else {
+    $posts = get_posts(array(
+        'meta_query' => array(
+            array(
+                'key' => 'featured',
+                'value' => '"featured_category"',
+                'compare' => 'LIKE',
+                'category_name' => $category
+            )
+        )
+    ));
+}
 
 if ($posts) {
     foreach ($posts as &$post) {
         $link = get_permalink($post->ID);
         $author_id = get_post_field('post_author', $post->ID);
-        $category = get_the_category($post->ID);
+        if (!isset($category)) {
+            $category = get_the_category($post->ID);
+        }
         $title = get_the_title($post);
         $description = get_field('description', $post->ID);
-        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
+        $image = catch_first_image();
         ?>
 
 
         <article class="article--featured margin-top margin-bottom">
-            <?php if ($image[0]) { ?>
+            <?php if ($image) { ?>
                 <div class="article-preview-image--featured img-bg"
-                     style="background: url(<?php echo $image[0] ?>) no-repeat center center;"></div>
+                     style="background: url(<?php echo $image ?>) no-repeat center center;"></div>
             <?php } else { ?>
                 <div class="article-preview-image--none-featured"></div>
             <?php } ?>
@@ -54,8 +70,6 @@ if ($posts) {
                 </div>
             </a>
         </article>
-
-
         <?php
     }
 }

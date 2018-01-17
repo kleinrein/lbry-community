@@ -1,6 +1,8 @@
 .breadcrumbs {
   color: color(text);
   text-decoration: none;
+  max-width: 700px;
+  margin: 0 auto;
   a {
     color: color(text);
     text-decoration: none;

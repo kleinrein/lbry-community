@@ -8,9 +8,12 @@
 <div class="col col-3-of-12 col-m-4-of-4">
     <article class="article-wrapper article--small">
         <a href="<?php the_permalink(); ?>">
-            <?php if (has_post_thumbnail()) { ?>
+            <?php
+                $image = catch_first_image();
+            ?>
+            <?php if ($image) { ?>
                 <div class="article-preview-image--small img-bg"
-                     style="background: url(<?php the_post_thumbnail_url(); ?>) no-repeat center center;"></div>
+                     style="background: url(<?php $image; ?>) no-repeat center center;"></div>
             <?php } else { ?>
                 <div class="article-preview-image--none-small"></div>
             <?php } ?>

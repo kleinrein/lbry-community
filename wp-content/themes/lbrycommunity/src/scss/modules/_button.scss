@@ -12,6 +12,9 @@
   transition: all 600ms cubic-bezier(.01, .85, .10, 1);
   transform-origin: bottom;
   cursor: pointer;
+  @include phone {
+    padding: .45em 1.75em;
+  }
 }
 
 .btn {
@@ -95,14 +98,19 @@
     border-radius: 0.75rem;
     color: color(silver);
     right: 4rem;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: all 125ms ease-in-out;
+    top: 10rem;
     @include phone {
       right: 2rem;
+      top: 5.25em;
+    }
+    @include desktop-hd {
+      top: 5.25em;
     }
     &:hover {
       transform: translateY(-.25rem);
-      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     }
     &.active,
     &:hover {

@@ -74,8 +74,10 @@
 
         <h2 class="text-center"><?php the_field('contact_title'); ?></h2>
         <p class="text-center"><?php the_field('contact_description'); ?></p>
-        <img class="img-small margin-top aligncenter"
-             src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
+        <a href="https://discordapp.com/invite/U5aRyN6">
+            <img class="img-small margin-top aligncenter"
+                 src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
+        </a>
     </div>
 </section>
 

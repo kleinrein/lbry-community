@@ -6,6 +6,10 @@
 .content-text {
   max-width: 700px;
   margin: 4em auto;
+  iframe {
+    width: 100%;
+    margin: 1rem 0;
+  }
   &--full-height {
     position: relative;
     padding: 45vh 10vw;

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.11/tiny-slider.css">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body>
 <div class="wrapper">
     <div class="grid">
         <header class="row center">
