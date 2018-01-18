@@ -1,6 +1,3 @@
-// ==== MENUS ==== //
-
-// Inline menu; used in header and footer navigation
 .menu-inline {
   @extend %clearfix;
   &, ul {
@@ -21,9 +18,33 @@
   }
 }
 
-// Menu toggle for mobile phones and small screens
-#responsive-menu-toggle {
-  @include media-above($break-medium) {
+header {
+  margin: 2em auto;
+  z-index: 10;
+}
+
+// Main menu
+.menu-main,
+.menu-full-container {
+  ul li {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: #7A7A7A;
+      position: relative;
+      transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+      &:hover {
+        cursor: pointer;
+        color: #AFAFAF
+      }
+    }
+  }
+}
+
+.menu-main {
+  @include phone {
     display: none;
   }
 }
@@ -49,11 +70,6 @@ header .current_page_item a {
   color: color(silver);
 }
 
-.menu-main {
-  @include phone {
-    display: none;
-  }
-}
 
 // Full screen menu
 body.full-menu-visible {
@@ -80,15 +96,26 @@ body.full-menu-visible {
     left: 0;
     right: 0;
     text-align: center;
-    padding: 20vh 0;
+    padding: 2rem 0;
     border-radius: 2rem 2rem 0 0;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    @include phone {
+      padding: 2rem 0;
+      justify-content: flex-end;
+    }
     li {
       list-style: none;
-      font-size: 2rem;
-      line-height: 4rem;
+      font-size: 1.6rem;
+      line-height: 3rem;
       font-weight: 400;
       @include phone {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
       }
     }
   }
@@ -104,7 +131,7 @@ body.full-menu-visible {
     right: 0;
     text-align: center;
     max-width: 600px;
-    margin-top: 10rem;
+    margin-top: 8em;
     @include phone {
       margin-top: 12rem;
     }

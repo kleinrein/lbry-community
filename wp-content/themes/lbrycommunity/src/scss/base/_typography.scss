@@ -1,11 +1,10 @@
+@import "./media";
+
 .title-secondary {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.15em;
 }
-
-$font-size-base : 18px;
-$line-height-base : 30px;
 
 h1,
 h2,
@@ -41,33 +40,52 @@ h1 {
     font-size: $font-size-base * 2.75;
     font-weight: 600;
     letter-spacing: 3px;
-} // ~38px
+    @include phone {
+        font-size: $font-size-base * 2;
+    }
+}
+
 h2 {
     font-size: $font-size-base * 1.875;
     font-weight: 300;
     letter-spacing: 2px;
-} // ~32px
+    @include phone {
+        font-size: $font-size-base * 1.5;
+    }
+}
+
 h3 {
     font-size: $font-size-base * 1.5;
     font-weight: 300;
-} // ~24px
+    @include phone {
+        font-size: $font-size-base * 1.35;
+    }
+}
+
 h4 {
     font-size: $font-size-base * 1.25;
     font-weight: 600;
-} // ~18px
+    @include phone {
+        font-size: $font-size-base * 1.15;
+    }
+}
+
 h5 {
     font-size: $font-size-base;
 }
 
 h6 {
     font-size: $font-size-base * 0.85;
-} // ~12px
+}
+
 h1 small {
     font-size: $font-size-base * 1.75;
-} // ~24px
+}
+
 h2 small {
     font-size: $font-size-base * 1.25;
-} // ~18px
+}
+
 h3 small {
     font-size: $font-size-base;
 }
@@ -119,6 +137,9 @@ hr {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     max-width: 32rem;
+    @include phone {
+        font-size: $font-size-base * 1.75;
+    }
 }
 
 .text-bold {

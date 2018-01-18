@@ -5,19 +5,17 @@
  */
 get_header();
 ?>
-    <main class="content" tabindex="-1" role="main">
+<?php the_breadcrumb(); ?>
+
+    <section class="container">
         <?php while (have_posts()) : the_post(); ?>
-
-            <?php the_breadcrumb(); ?>
-
             <?php get_template_part('content', 'single'); ?>
-
             <?php
             if (comments_open() || '0' != get_comments_number()) :
                 comments_template();
             endif;
             ?>
         <?php endwhile; ?>
-    </main>
+    </section>
 <?php
 get_footer();

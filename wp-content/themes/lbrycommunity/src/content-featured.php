@@ -40,7 +40,6 @@ if ($posts) {
         $image = catch_first_image();
         ?>
 
-
         <article class="article--featured margin-top margin-bottom">
             <?php if ($image) { ?>
                 <div class="article-preview-image--featured img-bg"

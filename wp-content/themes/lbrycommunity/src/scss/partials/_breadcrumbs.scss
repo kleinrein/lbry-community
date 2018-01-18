@@ -1,13 +1,23 @@
 .breadcrumbs {
   color: color(text);
   text-decoration: none;
-  max-width: 700px;
+  width: $width-site;
   margin: 0 auto;
+  opacity: .75;
+  transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+  margin-bottom: 4rem;
+  max-width: 90%;
+  &:hover {
+    opacity: 1;
+  }
   a {
     color: color(text);
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
+  }
+  @include phone {
+    width: 90%;
   }
 }

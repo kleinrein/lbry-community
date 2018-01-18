@@ -32,7 +32,7 @@ $current_url = home_url(add_query_arg(array(), $wp->request));
 
         <hr>
         <div class="article-categories">
-            <?php the_category('</span>&nbsp;&sext;&nbsp;<span>') ?>
+            <?php the_category('</span>&nbsp;⟩&nbsp;<span>') ?>
         </div>
         <hr>
 
@@ -43,15 +43,27 @@ $current_url = home_url(add_query_arg(array(), $wp->request));
         <div class="article-control-center margin-bottom">
             <p><b>Share</b></p>
             <div class="margin-top-1"></div>
-            <a class="btn--icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url; ?>">
+            <a class="btn--icon"
+               target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url; ?>">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-fb-small.svg" alt="">
             </a>
-            <a class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-reddit-small.svg"
-                                      alt=""></a>
-            <a class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-small.svg"
-                                      alt=""></a>
-            <a class="btn--icon"><img src="<?php echo get_bloginfo('template_url') ?>/images/icon-tumblr-small.svg"
-                                      alt=""></a>
+            <a class="btn--icon"
+               target="_blank"
+               href="https://reddit.com/submit?url=<?php echo $current_url; ?>&title=<?php the_title(); ?>">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-reddit-small.svg" alt="">
+            </a>
+            <a class="btn--icon"
+               target="_blank"
+               rel="canonical"
+               href="http://twitter.com/share?text=<?php the_title(); ?>&url=<?php echo $current_url; ?>&hashtags=LBRY">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-twitter-small.svg" alt="">
+            </a>
+            <a class="btn--icon"
+               target="_blank"
+               href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=<?php echo $current_url; ?>&title=<?php the_title(); ?>&caption=LBRY">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/icon-tumblr-small.svg" alt="">
+            </a>
         </div>
 
 

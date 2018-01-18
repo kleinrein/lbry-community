@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+get_header();
+the_breadcrumb();
+?>
 
 
     <h1 class="text-center"><?php single_cat_title(__(''), true); ?></h1>

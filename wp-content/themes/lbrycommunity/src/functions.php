@@ -75,31 +75,41 @@ function post_single_small($category, $posts_per_page = 4)
             get_template_part('content', 'single-small');
         }
         echo '</div>';
-        echo '<a href="' . $link . '" class="btn--ghost">More articles</a>';
+        echo '<a href="' . $link . '" class="btn--ghost">More ' .  strtolower($category) . ' articles</a>';
         echo "<div class='margin-bottom'>&nbsp;</div>";
     }
     echo '</div>';
 }
 
-function the_breadcrumb() {
-    $sep = ' > ';
+function the_breadcrumb()
+{
+    $sep = ' ⟩ ';
     if (!is_front_page()) {
         // Start the breadcrumb with a link to your homepage
         echo '<div class="breadcrumbs">';
+        echo '<b>';
         echo '<a href="';
         echo get_option('home');
         echo '">';
         bloginfo('name');
-        echo '</a>' . $sep;
+        echo '</a>' . '</b>' . $sep;
 
         // Check if the current page is a category, an archive or a single page. If so show the category or archive name.
-        if (is_category() || is_single() ){
+        if (is_category() || is_single()) {
+            $categories = get_the_category();
+            foreach ($categories as &$category) {
+                echo '<b>' . '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>' . '</b>' . $sep;
+            }
+
+            /*
+            echo '<b>';
             the_category("</span>&nbsp;>&nbsp;<span>");
+            echo '</b>';
+            */
         }
 
         // If the current page is a single post, show its title with the separator
         if (is_single()) {
-            echo $sep;
             the_title();
         }
 
@@ -109,10 +119,10 @@ function the_breadcrumb() {
         }
 
         // if you have a static page assigned to be you posts list page. It will find the title of the static page and display it. i.e Home >> Blog
-        if (is_home()){
+        if (is_home()) {
             global $post;
             $page_for_posts_id = get_option('page_for_posts');
-            if ( $page_for_posts_id ) {
+            if ($page_for_posts_id) {
                 $post = get_page($page_for_posts_id);
                 setup_postdata($post);
                 the_title();
@@ -123,7 +133,8 @@ function the_breadcrumb() {
     }
 }
 
-function catch_first_image() {
+function catch_first_image()
+{
     global $post, $posts;
     $first_img = '';
     ob_start();
@@ -131,9 +142,10 @@ function catch_first_image() {
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
     $first_img = $matches [1] [0];
 
-    if(empty($first_img)){ //Defines a default image
+    if (empty($first_img)) { //Defines a default image
         $first_img = null;
     }
     return $first_img;
 }
+
 ?>

@@ -3,7 +3,9 @@
  * Template Name: Articles
  * @package lbry
  */
-get_header(); ?>
+get_header();
+the_breadcrumb();
+?>
 
     <h1 class="text-center"><?php the_title(); ?></h1>
 

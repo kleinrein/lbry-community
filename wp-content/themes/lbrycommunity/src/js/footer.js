@@ -44,13 +44,26 @@
             })
         });
 
-        $(document).keypress(function(event) {
+        $(document).keypress(function (event) {
             if (event.keyCode === 27) {
                 $(navBtn).trigger("click");
-            };
+            }
+            ;
         });
 
         // AOS
         AOS.init();
+
+        // Smooth scroll all anchor tags
+        $('a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $($(this).attr('href').substring(1)).velocity('scroll', {
+                duration: 500,
+                offset: -40,
+                easing: 'ease-in-out'
+            });
+        });
     });
 }(jQuery));

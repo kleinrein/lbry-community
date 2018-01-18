@@ -34,8 +34,8 @@
 <section class="container margin-bottom">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="content-text" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div data-aos="fade"
-                 data-aos-delay="200"
+            <div data-aos="fade-down"
+                 data-aos-delay="400"
                  data-aos-duration="400"
                  data-aos-easing="ease"
                  data-aos-once="true"
@@ -53,6 +53,7 @@
 </section>
 
 <section class="section-contact">
+    <a name="Contact-us"></a>
     <div class="container air">
         <h1 class="text-gradient text-center"><?php the_field('gradient_text'); ?></h1>
 
@@ -74,7 +75,7 @@
 
         <h2 class="text-center"><?php the_field('contact_title'); ?></h2>
         <p class="text-center"><?php the_field('contact_description'); ?></p>
-        <a href="https://discordapp.com/invite/U5aRyN6">
+        <a target="_blank" href="https://discordapp.com/invite/U5aRyN6">
             <img class="img-small margin-top aligncenter"
                  src="<?php echo get_bloginfo('template_url') ?>/images/icon-discord.svg" alt="discord">
         </a>

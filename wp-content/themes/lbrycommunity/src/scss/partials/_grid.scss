@@ -21,7 +21,7 @@ $gutter-width: 20px !default;
 
 // Grid width and max-width.
 // It is automatically centered on the page.
-$grid-width: 1480px !default;
+$grid-width: $width-site !default;
 $grid-max-width: 90% !default;
 
 // Pushes and Pulls
