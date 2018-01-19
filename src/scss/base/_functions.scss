@@ -1,0 +1,11 @@
+@function config($map, $key) {
+  @return map-get($map, $key);
+}
+
+@function color($request) {
+  @return config($_color, $request);
+}
+
+@function metadata($request) {
+  @return config($_metadata, $request);
+}

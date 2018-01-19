@@ -1,0 +1,80 @@
+@import "./functions";
+@import "./media";
+
+$width-site:    1480px;
+$width-site-small: 90%;
+
+// Breakpoints
+$phone-width: 650px;
+$tablet-width: 968px;
+$desktop-width: 1400px;
+$desktop-hd-width: 1900px;
+
+// A standard margin
+$spacer: 30px;
+
+// Fonts
+$font-size-base : 18px;
+$line-height-base : 30px;
+
+$_color: (
+        eden: #145B49,
+        elf-green: #069170,
+        text: #E0E0E0,
+        link: steelblue,
+        link-muted: steelblue,
+        body-background: #222121,
+        white: #FFFFFF,
+        dark: #272727,
+        mine-shaft: #212121,
+        cod-grey: #141414,
+        silver: #C9C9C9,
+        alto: #E0E0E0,
+        blue: #3498db,
+        orange: #F48A43
+);
+
+// Metadata; use metadata() to access
+$_metadata: (
+  theme-name:               "LBRY Community"
+, theme-uri:                "https://github.com/synapticism/wordpress-gulp-starter-kit"
+, theme-author:             "Andreas Rein"
+, theme-author-uri:         "http://synapticism.com"
+, theme-description:        "A minimally viable theme made with the WordPress/Gulp starter kit"
+, theme-version:            "0.0.1"
+, theme-license:            "GPLv3"
+, theme-license-uri:        "http://www.gnu.org/licenses/gpl.txt"
+, theme-tags:               (light, responsive-layout, right-sidebar, starter-theme, two-columns, translation-ready, white)
+, theme-text-domain:        "voidx"
+, theme-text-domain-path:   "/languages/"
+);
+
+
+// body
+body {
+    background-color: color(body-background);
+    color: color(text);
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    line-height: 1.5;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    min-height:100vh;
+    flex-direction:column;
+    flex: 1;
+    @include ie11 {
+        flex: 1 auto;
+    }
+}

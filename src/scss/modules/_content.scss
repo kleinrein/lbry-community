@@ -1,0 +1,47 @@
+.content {
+  margin: 0 auto;
+}
+
+.content-text {
+  max-width: 700px;
+  margin: 4em auto;
+  iframe {
+    width: 100%;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+  &--full-height {
+    position: relative;
+    padding: 45vh 10vw;
+    @include phone {
+      padding: 30vh 10vw;
+    }
+  }
+  a {
+    color: color(blue);
+  }
+}
+
+.air {
+  padding: 4rem 0;
+}
+
+.text-content-part {
+  margin: 4em 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.four-lines {
+  display: block;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%pseudo {
+  content: " ";
+  position: absolute;
+}

@@ -1,0 +1,202 @@
+header {
+  margin: 2em auto;
+  z-index: 10;
+}
+
+// Main menu
+.menu-main,
+.menu-full-container {
+  ul li {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    a {
+      text-decoration: none;
+      color: #7A7A7A;
+      position: relative;
+      transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+      &:hover {
+        cursor: pointer;
+        color: #AFAFAF
+      }
+    }
+  }
+}
+
+.menu-main ul li {
+  margin-left: 1.5rem;
+}
+
+.menu-main {
+  @include phone {
+    display: none;
+  }
+}
+
+header .current_page_item a {
+  color: #AFAFAF;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, .25);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -.05rem;
+    transform: scale(1.5);
+    border-radius: .5rem;
+  }
+}
+
+.menu-item {
+  color: color(silver);
+}
+
+
+// Full screen menu
+body.full-menu-visible {
+  overflow: hidden;
+}
+
+.menu-full-screen {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(100vh at 50% 50%, #262626 0%, #1A1A1A 100%);
+  transform: scale(0.5);
+  opacity: 0;
+  #menu-full {
+    background-color: color(mine-shaft);
+    box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 2rem 2rem 0 0;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    @include phone {
+      padding: 2rem 0;
+      justify-content: flex-end;
+    }
+    li {
+      list-style: none;
+      font-size: 1.6rem;
+      line-height: 3rem;
+      font-weight: 400;
+      @include phone {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+  &.active {
+    display: block;
+  }
+
+  .search-form {
+    @extend .flex--container--row;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 600px;
+    margin-top: 8em;
+    @include phone {
+      margin-top: 4rem;
+    }
+    span.screen-reader-text {
+      display: none;
+      margin-bottom: 1rem;
+    }
+    label {
+      @include phone {
+        display: block;
+        width: 90%;
+      }
+    }
+    input {
+      @extend .flex--item;
+      background-color: color(cod-grey);
+      border: 2px solid #000000;
+      box-sizing: border-box;
+      border-radius: 20px;
+      padding: 1rem 1.25rem;
+      margin-right: 2rem;
+      color: color(alto);
+      transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+      &:hover {
+        background-color: darken(color(cod-grey), 2.5%);
+      }
+      &:focus {
+        background-color: darken(color(cod-grey), 5%);
+      }
+      @include phone {
+        @include centerer(true, true);
+        padding: .75rem;
+        top: -.5rem;
+        width: 90%;
+      }
+    }
+    .search-submit {
+      @extend .flex--item;
+      border: 2px solid color(eden);
+      border-radius: 20px;
+      padding: 1rem;
+      background: transparent;
+      color: color(alto);
+      transition: all 600ms cubic-bezier(.01, .85, .10, 1);
+      cursor: pointer;
+      &:hover {
+        background-color: color(eden);
+      }
+      @include phone {
+        @include centerer(true, true);
+        padding: .75rem;
+        display: block;
+        width: 90%;
+        top: 4rem;
+      }
+    }
+  }
+
+  // Current menu item
+  .current-menu-item a {
+    color: #AFAFAF;
+    z-index: 0;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0 auto;
+      background: #1C1C1C;
+      box-shadow: 0px 2px 10px rgba(244, 138, 67, 0.05);
+      z-index: -1;
+      left: 0;
+      right: 0;
+      transform: scale(1.5);
+      border-radius: .5em;
+    }
+  }
+}

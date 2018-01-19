@@ -1,1 +1,0 @@
-# LBRY Community Wordpress Theme
