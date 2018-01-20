@@ -41,7 +41,8 @@ header {
   }
 }
 
-header .current_page_item a {
+header .current_page_item a,
+header .current-menu-item a {
   color: #AFAFAF;
   &:after {
     content: "";
@@ -53,7 +54,7 @@ header .current_page_item a {
     left: 0;
     right: 0;
     top: -.05rem;
-    transform: scale(1.5);
+    transform: scale(1.35);
     border-radius: .5rem;
   }
 }
@@ -88,9 +89,8 @@ body.full-menu-visible {
     left: 0;
     right: 0;
     text-align: center;
-    padding: 2rem 0 !important;
+    padding: 2.5rem 0 !important;
     border-radius: 2rem 2rem 0 0;
-    height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;

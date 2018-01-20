@@ -5,7 +5,7 @@
  */
 
 
-if (!isset($category)) {
+if (!isset($category) && !isset($featured)) {
     $posts = get_posts(array(
         'meta_query' => array(
             array(
@@ -15,7 +15,7 @@ if (!isset($category)) {
             )
         )
     ));
-} else {
+} else if (isset($category)) {
     $posts = get_posts(array(
         'meta_query' => array(
             array(
@@ -28,7 +28,10 @@ if (!isset($category)) {
     ));
 }
 
-if ($posts) {
+if ($posts || $featured) {
+    if (isset($featured)) {
+        $posts = array($featured);
+    }
     foreach ($posts as &$post) {
         $link = get_permalink($post->ID);
         $author_id = get_post_field('post_author', $post->ID);
@@ -37,7 +40,7 @@ if ($posts) {
         }
         $title = get_the_title($post);
         $description = get_field('description', $post->ID);
-        $image = catch_first_image();
+        $image = catch_first_image($post->ID);
         ?>
 
         <article class="article--featured margin-top margin-bottom">

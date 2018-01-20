@@ -125,10 +125,9 @@ function the_breadcrumb()
     }
 }
 
-function catch_first_image()
+function catch_first_image($id)
 {
-    global $post, $posts;
-    $first_img = '';
+    $post = get_post($id);
     ob_start();
     ob_end_clean();
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);

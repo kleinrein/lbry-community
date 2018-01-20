@@ -9,12 +9,12 @@
 <!-- Intro section -->
 <section class="container center section-intro">
     <div class="content-text--full-height">
-        <h1 class="text-center mx-auto"><?php the_field('title'); ?></h1>
-        <h3 class="text-center mx-auto"><?php the_field('description'); ?></h3>
+        <h1 class="text-center mx-auto" style="opacity: 0;"><?php the_field('title'); ?></h1>
+        <h3 class="text-center mx-auto" style="opacity: 0;"><?php the_field('description'); ?></h3>
         <div class="container center flex">
             <div>
-                <a href="https://lbry.io/get" class="btn--primary">Get LBRY</a>
-                <a href="https://spee.ch" class="btn--secondary" data-tooltip="">Use Spee.ch</a>
+                <a href="https://lbry.io/get" class="btn--primary" style="opacity: 0;">Get LBRY</a>
+                <a href="https://spee.ch" class="btn--secondary" style="opacity: 0;">Use Spee.ch</a>
             </div>
         </div>
         <div class="ticker-wrapper">

@@ -11,6 +11,9 @@
     margin: 1rem 0;
     max-width: 100%;
   }
+  video {
+    width: 100% !important;
+  }
   &--full-height {
     position: relative;
     padding: 45vh 10vw;

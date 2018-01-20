@@ -8,7 +8,7 @@ $(function () {
             targets: '.section-intro h1',
             scale: [0.5, 1],
             opacity: [0, 1],
-            delay: 800,
+            delay: 600,
             duration: 1200,
             elasticity: 40,
             easing: 'easeOutExpo'
@@ -17,8 +17,8 @@ $(function () {
             targets: '.section-intro h3',
             scale: [0.2, 1],
             opacity: [0, 1],
-            offset: '-=1800',
-            delay: 800,
+            offset: '-=1600',
+            delay: 600,
             duration: 1200,
             elasticity: 40
         })
@@ -27,7 +27,7 @@ $(function () {
             scale: [0.8, 1],
             opacity: [0, 1],
             offset: '-=1500',
-            delay: 800,
+            delay: 600,
             duration: 1000
         })
         .add({
@@ -35,7 +35,7 @@ $(function () {
             scale: [0.8, 1],
             opacity: [0, 1],
             offset: '-=1500',
-            delay: 800,
+            delay: 600,
             duration: 1000
         });
 

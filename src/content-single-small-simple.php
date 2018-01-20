@@ -8,12 +8,13 @@
 <div class="col col-4-of-12 col-m-4-of-4">
     <article class="article-wrapper article--small">
         <?php
-            $image = catch_first_image();
+        $id = get_the_id();
+        $image = catch_first_image($id);
         ?>
         <a href="<?php the_permalink(); ?>">
             <?php if ($image) { ?>
                 <div class="article-preview-image--small img-bg"
-                     style="background: url(<?php $image; ?>) no-repeat center center;"></div>
+                     style="background: url(<?php echo $image; ?>) no-repeat center center;"></div>
             <?php } else { ?>
                 <div class="article-preview-image--none-small"></div>
             <?php } ?>
