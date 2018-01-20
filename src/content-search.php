@@ -6,7 +6,7 @@
 ?>
 
 
-<a class="search-result" href="<?php esc_url(get_permalink()); ?>">
+<a class="search-result" href="<?php echo esc_url(get_permalink()); ?>">
     <article class="article--dark">
         <h2>
             <?php the_title(); ?>

@@ -23,10 +23,9 @@ $_color: (
         text: #E0E0E0,
         link: steelblue,
         link-muted: steelblue,
-        body-background: #222121,
         white: #FFFFFF,
         dark: #272727,
-        mine-shaft: #212121,
+        mine-shaft: #222222,
         cod-grey: #141414,
         boulder: #7A7A7A,
         silver: #C9C9C9,
@@ -53,7 +52,7 @@ $_metadata: (
 
 // body
 body {
-    background-color: color(body-background);
+    background-color: color(mine-shaft);
     color: color(text);
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-size: $font-size-base;

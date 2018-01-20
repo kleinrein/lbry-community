@@ -1,6 +1,16 @@
 .img-header {
     max-height: 100%;
     width: 8.5em;
+    z-index:10000;
+    &.active {
+        position: fixed;
+        @include tablet {
+            width: 6em;
+        }
+        @include phone {
+            display: none;
+        }
+    }
 }
 
 .img-mid {

@@ -15,7 +15,7 @@
 <div class="wrapper">
     <div class="grid">
         <header class="row center">
-                <div class="flex">
+                <div class="flex" style="z-index: 100;">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                         <img class="img-header" src="<?php echo get_bloginfo('template_url') ?>/images/lbrycommunity.svg"/>
                     </a>

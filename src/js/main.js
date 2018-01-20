@@ -42,36 +42,38 @@ $(function () {
     // Full screen menu
     const navBtn = document.querySelector(".btn--nav");
     const navWrapper = document.querySelector(".menu-full-screen");
+    const imgHeader = document.querySelector(".img-header");
 
     $(navBtn).click(function () {
-        console.log('clicked');
         const active = navBtn.className.indexOf('active') !== -1;
 
         $(navBtn).toggleClass("active");
         $("body").toggleClass("full-menu-visible");
 
         if (active) {
+            $(imgHeader).toggleClass("active");
             anime({
                 targets: navWrapper,
                 scale: [1, 1.2],
                 opacity: 0,
                 duration: 500,
-                elasticity: 40,
+                elasticity: 60,
                 complete: function () {
-                    $(navWrapper).toggleClass("active")
+                    $(navWrapper).toggleClass("active");
                 }
             });
             return;
         }
 
         $(navWrapper).toggleClass("active");
+        $(imgHeader).toggleClass("active");
 
         anime({
             targets: navWrapper,
             scale: [1.2, 1],
             opacity: 1,
             duration: 400,
-            elasticity: 40
+            elasticity: 80
         })
     });
 
