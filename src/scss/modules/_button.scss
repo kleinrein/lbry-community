@@ -27,11 +27,11 @@
     color: color(white);
     letter-spacing: 0.05em;
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-4px) !important;
       text-shadow: 1px 1px rgba(0, 0, 0, .5);
     }
     &:active {
-      transform: translateY(-2px) scale(1, 1.1);
+      transform: translateY(-2px) scale(1, 1.1) !important;
     }
   }
   &--secondary {
@@ -41,10 +41,10 @@
     background: linear-gradient(180deg, #8F33B6 0%, #BA3DEE 100%);
     color: color(white);
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-4px) !important;
     }
     &:active {
-      transform: translateY(-2px) scale(1, 1.1);
+      transform: translateY(-2px) scale(1, 1.1) !important;
     }
   }
   &--ghost {
@@ -99,7 +99,7 @@
     color: color(silver);
     right: 4rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: all 125ms ease-in-out;
+    transition: all 150ms ease-in-out;
     top: 10rem;
     @include phone {
       right: 2rem;
@@ -114,20 +114,25 @@
     }
     &.active,
     &:hover {
-      transform: translateY(-.05rem);
+      transform: translateY(-.075rem);
     }
     &.active {
       span:first-child:before,
       span:last-child:before {
-        top: 0.85rem;
+        top: 1.2rem;
       }
       span:first-child:after,
       span:last-child:after {
         top: 1.4rem;
       }
+      span:before,
+      span:after {
+        width: .3rem !important;
+        height: .3rem !important;
+      }
     }
     span {
-      transition: all 1s cubic-bezier(.01, .85, .10, 1);
+      transition: all 2s ease-in-out;
     }
     span:first-child:before,
     span:last-child:before {

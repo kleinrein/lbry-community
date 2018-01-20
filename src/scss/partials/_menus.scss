@@ -16,7 +16,7 @@ header {
     float: left;
     a {
       text-decoration: none;
-      color: #7A7A7A;
+      color: color(boulder);
       position: relative;
       transition: all 600ms cubic-bezier(.01, .85, .10, 1);
       &:hover {
@@ -24,11 +24,15 @@ header {
         color: #AFAFAF
       }
     }
+    a[href="#"] {
+      cursor: default;
+      color: color(boulder);
+    }
   }
 }
 
 .menu-main ul li {
-  margin-left: 1.5rem;
+  margin-left: 1.75rem;
 }
 
 .menu-main {
@@ -120,6 +124,9 @@ body.full-menu-visible {
     text-align: center;
     max-width: 600px;
     margin-top: 8em;
+    @include tablet {
+      margin-top: 6rem;
+    }
     @include phone {
       margin-top: 4rem;
     }

@@ -41,6 +41,9 @@
   a {
     text-decoration: none;
   }
+  @include tablet {
+    top: 10vh;
+  }
   @include phone {
     top: 5vh;
   }

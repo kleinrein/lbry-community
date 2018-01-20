@@ -29,10 +29,11 @@
             </a>
         </div>
     </div>
+    <div class="scroll-down" data-scroll="#What-is-lbry"></div>
 </section>
 
 <section class="container margin-bottom">
-    <a name="What-is-lbry"></a>
+    <a id="What-is-lbry" name="What-is-lbry"></a>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="content-text" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div data-aos="fade-down"
@@ -53,7 +54,7 @@
     <?php endwhile; endif; ?>
 </section>
 
-<section class="section-contact">
+<section class="section-padding section-dark">
     <a name="Contact-us"></a>
     <div class="container air">
         <h1 class="text-gradient text-center"><?php the_field('gradient_text'); ?></h1>

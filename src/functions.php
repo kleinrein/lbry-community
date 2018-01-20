@@ -21,7 +21,7 @@ add_action('after_setup_theme', 'lbry_setup', 11);
 
 class lbry_enqueue {
     function theme_scripts() {
-        wp_enqueue_script('lbry-main-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), LBRY_VERSION, false);
+        wp_enqueue_script('lbry-main-js', get_stylesheet_directory_uri() . '/js/scripts.js', NULL, NULL, true);
         wp_enqueue_style('lbry-main-css', get_stylesheet_uri() , array(), LBRY_VERSION, 'all');
     }
 }

@@ -1,6 +1,14 @@
 
 // ** Index **
 
+.section-padding {
+  padding: 4em;
+}
+
+.section-dark {
+  background-color: #1C1C1C;
+}
+
 .section-intro {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -55,13 +63,4 @@
   padding: 4em;
   background: linear-gradient(to right, #2E2E2E, #2D2D2D);
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
-}
-
-.section-contact {
-  height: 100vh;
-  padding: 4em;
-}
-
-.section-contact {
-  background-color: #1C1C1C;
 }

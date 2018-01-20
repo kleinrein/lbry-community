@@ -28,6 +28,7 @@ $_color: (
         dark: #272727,
         mine-shaft: #212121,
         cod-grey: #141414,
+        boulder: #7A7A7A,
         silver: #C9C9C9,
         alto: #E0E0E0,
         blue: #3498db,
@@ -55,6 +56,7 @@ body {
     background-color: color(body-background);
     color: color(text);
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-size: $font-size-base;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
