@@ -38,6 +38,6 @@ if ($featuredArticle) {
     ?>
 </section>
 
-
+<?php
 get_footer();
 ?>
