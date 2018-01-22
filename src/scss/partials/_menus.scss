@@ -51,10 +51,11 @@ header .current-menu-item a {
     height: 100%;
     border: 1px solid rgba(255, 255, 255, .25);
     margin: 0 auto;
-    left: 0;
+    left: -.5em;
     right: 0;
-    top: -.05rem;
-    transform: scale(1.35);
+    padding: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: .5rem;
   }
 }

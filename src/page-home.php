@@ -54,10 +54,10 @@
     <?php endwhile; endif; ?>
 </section>
 
-<section class="section-padding section-dark">
+<section class="section-dark padding-top padding-bottom">
     <a name="Contact-us"></a>
     <div class="container air">
-        <h1 class="text-gradient text-center"><?php the_field('gradient_text'); ?></h1>
+        <h1 class="text-gradient text-center margin-auto"><?php the_field('gradient_text'); ?></h1>
 
         <div class="flex center margin-top margin-bottom">
             <a target="_blank" href="https://twitter.com/LBRYCommunity">

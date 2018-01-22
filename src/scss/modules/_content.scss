@@ -5,7 +5,6 @@
 .content-text {
   max-width: 700px;
   margin: 4em auto;
-  iframe,
   video {
     width: 100%;
     margin: 1rem 0;
@@ -18,7 +17,7 @@
     position: relative;
     padding: 45vh 10vw;
     @include phone {
-      padding: 30vh 10vw;
+      padding: 35vh 10vw;
     }
   }
   a {

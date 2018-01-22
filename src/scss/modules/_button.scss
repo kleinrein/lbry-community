@@ -88,7 +88,7 @@
     }
   }
   &--nav {
-    z-index: 10;
+    z-index: 100;
     cursor: pointer;
     position: absolute;
     background-color: #242424;
@@ -103,10 +103,10 @@
     top: 10rem;
     @include phone {
       right: 2rem;
-      top: 5.25em;
+      top: 4.5rem;
     }
     @include desktop-hd {
-      top: 5.25em;
+      top: 5.5em;
     }
     &:hover {
       transform: translateY(-.25rem);
@@ -115,6 +115,7 @@
     &.active,
     &:hover {
       transform: translateY(-.075rem);
+      position: fixed;
     }
     &.active {
       span:first-child:before,

@@ -37,26 +37,29 @@
   width: 100%;
   justify-content: flex-end;
   position: relative;
-  top: 20vh;
+  top: 5rem;
   a {
     text-decoration: none;
   }
-  @include tablet {
-    top: 10vh;
-  }
   @include phone {
-    top: 5vh;
+    top: 2rem;
   }
   .ticker-title {
     color: #717171;
     margin: 0;
     font-size: 1.1rem;
     text-align: right;
+    @include phone {
+      font-size: .9rem;
+    }
   }
   .ticker-price {
     color: #717171;
     margin: 0;
     text-align: right;
+    @include phone {
+      font-size: .75rem;
+    }
   }
   .ticker-positive {
     animation-name: positive-number;

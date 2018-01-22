@@ -1,3 +1,5 @@
+// Margins
+
 .margin-bottom {
   margin-bottom: 4em;
 }
@@ -14,13 +16,14 @@
   margin-top: 1em;
 }
 
-.text-right {
-  text-align: right;
+// Paddings
+
+.padding-bottom {
+  padding-bottom: 4em;
 }
 
-.text-center {
-  text-align: center;
-  margin: 0 auto;
+.padding-top {
+  padding-top: 4em;
 }
 
 .flex {
@@ -56,7 +59,7 @@
   cursor: pointer;
   &:hover {
     &:after {
-      transform: scale(2, 1.75);
+      transform: scale(2, 1.25);
     }
   }
   &:after {
@@ -68,6 +71,12 @@
     height: 8rem;
     background-color: rgba(255,255,255,0.3);
   }
+   @include phone {
+     height: 8rem;
+     &:after {
+       height: 6rem;
+     }
+   }
 }
 
 // Boxes
@@ -81,7 +90,8 @@
   position: relative;
   transition: all 600ms cubic-bezier(.01, .85, .10, 1);
   @include phone {
-    padding: 20px;
+    padding: .5rem;
+    border-radius: 5px;
   }
   .box-dark-text {
     transition: all 600ms cubic-bezier(.01, .85, .10, 1);
@@ -111,3 +121,21 @@
     }
   }
 }
+
+// Video
+.wrapper-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin: 1rem 0;
+  iframe,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+

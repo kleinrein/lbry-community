@@ -50,6 +50,7 @@ $lbry_theme = new lbry_theme();
 add_action('wp_enqueue_scripts', array($lbry_theme, 'theme_enqueue'));
 add_action('after_setup_theme', array($lbry_theme, 'theme_setup'));
 
+
 function post_single_small($category, $posts_per_page = 4)
 {
     $category = ucfirst($category);
