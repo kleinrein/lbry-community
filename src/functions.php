@@ -17,12 +17,15 @@ function lbry_setup()
     register_nav_menu('header', __('Header menu', 'lbry'));
     register_nav_menu('footer', __('Footer menu', 'lbry'));
 }
+
 add_action('after_setup_theme', 'lbry_setup', 11);
 
-class lbry_enqueue {
-    function theme_scripts() {
+class lbry_enqueue
+{
+    function theme_scripts()
+    {
         wp_enqueue_script('lbry-main-js', get_stylesheet_directory_uri() . '/js/scripts.js', NULL, NULL, true);
-        wp_enqueue_style('lbry-main-css', get_stylesheet_uri() , array(), LBRY_VERSION, 'all');
+        wp_enqueue_style('lbry-main-css', get_stylesheet_uri(), array(), LBRY_VERSION, 'all');
     }
 }
 
@@ -57,7 +60,7 @@ function post_single_small($category, $posts_per_page = 4)
     $category_id = get_cat_ID($category);
     $link = get_category_link($category_id);
 
-    echo "<h2 class='text-center'>$category articles</h2>";
+    echo "<h2 class='text-center'>$category </h2>";
     echo "<div class='margin-bottom-1'>&nbsp;</div>";
 
     $query = new WP_Query(array(
@@ -74,7 +77,7 @@ function post_single_small($category, $posts_per_page = 4)
             get_template_part('content', 'single-small');
         }
         echo '</div>';
-        echo '<a href="' . $link . '" class="btn--ghost">More ' . strtolower($category) . ' articles</a>';
+        echo '<a href="' . $link . '" class="btn--ghost">More ' . strtolower($category) . '</a>';
         echo "<div class='margin-bottom'>&nbsp;</div>";
     }
     echo '</div>';
@@ -139,5 +142,6 @@ function catch_first_image($id)
     }
     return $first_img;
 }
+
 
 ?>

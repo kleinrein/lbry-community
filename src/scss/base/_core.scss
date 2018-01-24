@@ -1,7 +1,7 @@
 @import "./functions";
 @import "./media";
 
-$width-site:    1480px;
+$width-site: 1480px;
 $width-site-small: 90%;
 
 // Breakpoints
@@ -15,7 +15,7 @@ $spacer: 30px;
 
 // Fonts
 $font-size-base : 18px;
-$line-height-base : 30px;
+$line-height-base : 28px;
 
 $_color: (
         eden: #145B49,
@@ -37,15 +37,15 @@ $_color: (
 // Metadata; use metadata() to access
 $_metadata: (
   theme-name:               "LBRY Community"
-, theme-uri:                "https://github.com/synapticism/wordpress-gulp-starter-kit"
+, theme-uri:                "https://github.com/kleinrein/lbry-community"
 , theme-author:             "Andreas Rein"
-, theme-author-uri:         "http://synapticism.com"
-, theme-description:        "A minimally viable theme made with the WordPress/Gulp starter kit"
-, theme-version:            "0.0.1"
+, theme-author-uri:         "https://github.com/kleinrein/"
+, theme-description:        "The custom theme made for https://LBRY.community"
+, theme-version:            "1.0.1"
 , theme-license:            "GPLv3"
 , theme-license-uri:        "http://www.gnu.org/licenses/gpl.txt"
-, theme-tags:               (light, responsive-layout, right-sidebar, starter-theme, two-columns, translation-ready, white)
-, theme-text-domain:        "voidx"
+, theme-tags:               (light, responsive-layout, dark)
+, theme-text-domain:        "lbry"
 , theme-text-domain-path:   "/languages/"
 );
 

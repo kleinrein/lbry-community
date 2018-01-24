@@ -48,7 +48,7 @@ $(function () {
         const active = navBtn.className.indexOf('active') !== -1;
 
         $(navBtn).toggleClass("active");
-        $("body").toggleClass("full-menu-visible");
+        $("html").toggleClass("full-menu-visible");
 
         if (active) {
             $(imgHeader).toggleClass("active");

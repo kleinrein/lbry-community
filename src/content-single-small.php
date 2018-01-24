@@ -5,7 +5,7 @@
  */
 
 ?>
-<div class="col col-3-of-12 col-m-4-of-4">
+<div class="col col-3-of-12 col-l-2-of-4 col-s-4-of-4">
     <article class="article-wrapper article--small">
         <a href="<?php the_permalink(); ?>">
             <?php
