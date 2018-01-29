@@ -51,31 +51,29 @@
 // Scroll down
 .scroll-down {
   @include centerer(true, false);
-  width: 8rem;
-  height: 12rem;
-  margin-left: -4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   animation: bounce 3s infinite;
-  bottom: -4rem;
+  bottom: 2rem;
   cursor: pointer;
-  &:hover {
-    &:after {
-      transform: scale(2, 1.25);
-    }
-  }
   &:after {
     @include centerer(true, false);
     transition: all 100ms ease-in-out;
-    content: "";
-    width: 1px;
+    content: "\2193";
+    width: inherit;
+    height: inherit;
+    line-height: inherit;
+    text-align: center;
+    border-radius: 50%;
     bottom: 0;
-    height: 8rem;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(0,0,0, .5);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    border: 1px solid darken(#8F33B6, 15%);
+    margin-left: -1.25rem;
   }
    @include phone {
-     height: 8rem;
-     &:after {
-       height: 6rem;
-     }
+     bottom: 0;
    }
 }
 

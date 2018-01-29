@@ -13,8 +13,8 @@
         <h3 class="text-center mx-auto" style="opacity: 0;"><?php the_field('description'); ?></h3>
         <div class="container center flex">
             <div>
-                <a href="https://lbry.io/get" class="btn--primary" style="opacity: 0;">Get LBRY</a>
-                <a href="https://spee.ch" class="btn--secondary" style="opacity: 0;">Use Spee.ch</a>
+                <a target="_blank" href="https://lbry.io/get" class="btn--primary" style="opacity: 0;">Get LBRY</a>
+                <a target="_blank" href="https://spee.ch" class="btn--secondary" style="opacity: 0;">Use Spee.ch</a>
             </div>
         </div>
         <div class="ticker-wrapper">
