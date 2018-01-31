@@ -57,6 +57,7 @@
   animation: bounce 3s infinite;
   bottom: 2rem;
   cursor: pointer;
+  z-index: 100;
   &:after {
     @include centerer(true, false);
     transition: all 100ms ease-in-out;
@@ -71,6 +72,9 @@
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     border: 1px solid darken(#8F33B6, 15%);
     margin-left: -1.25rem;
+  }
+  &:hover:after {
+    background-color: rgba(0,0,0, .6);
   }
    @include phone {
      bottom: 0;
@@ -137,3 +141,13 @@
   }
 }
 
+// Other
+#lbry-comm-homepage h1{
+  font-size:100%!important;
+}
+
+#lbry-comm-homepage.lbry-comm-video {
+  border:1px solid #666;
+  padding:20px;
+  margin:20px;
+}

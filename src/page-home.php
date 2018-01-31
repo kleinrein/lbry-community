@@ -29,7 +29,7 @@
             </a>
         </div>
     </div>
-    <div class="scroll-down" data-scroll="#What-is-lbry"></div>
+    <div class="scroll-down" data-scroll="#What-is-lbry" title="Scroll down"></div>
 </section>
 
 <section class="container margin-bottom">

@@ -105,8 +105,8 @@
       right: 2rem;
       top: 4.5rem;
     }
-    @include desktop-hd {
-      top: 5.5em;
+    @include tablet-min {
+      display: none;
     }
     &:hover {
       transform: translateY(-.25rem);

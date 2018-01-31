@@ -16,6 +16,12 @@
   }
 }
 
+@mixin tablet-min {
+  @media (min-width: 1px) {
+    @content;
+  }
+}
+
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {

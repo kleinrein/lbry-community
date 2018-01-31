@@ -73,7 +73,7 @@ $current_url = home_url(add_query_arg(array(), $wp->request));
         $query = new WP_Query(array(
             'posts_per_page' => 3,
             'category_name' => esc_html($category[0]->name),
-            'orderby' => 'date'
+            'orderby' => 'rand'
         ));
 
         if ($query->have_posts()) {
