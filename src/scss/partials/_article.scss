@@ -67,6 +67,9 @@ article {
     .preamble {
       font-size: 1.5rem;
     }
+    .article-categories {
+      word-break: break-all;
+    }
     .article-categories a {
       text-decoration: none;
       color: color(text);
@@ -78,6 +81,9 @@ article {
     hr {
       color: rgba(255,255,255,.2);
       transform: scale(1.1, 1);
+      @include phone {
+        transform: none;
+      }
     }
   }
   &--featured {

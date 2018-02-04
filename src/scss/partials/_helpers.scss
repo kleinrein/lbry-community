@@ -57,7 +57,7 @@
   animation: bounce 3s infinite;
   bottom: 2rem;
   cursor: pointer;
-  z-index: 100;
+  z-index: 1;
   &:after {
     @include centerer(true, false);
     transition: all 100ms ease-in-out;

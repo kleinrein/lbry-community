@@ -116,7 +116,7 @@
                     else {
                         ticker.classList.add('ticker-negative')
                     }
-                    document.querySelector('.ticker-price b').innerHTML = lbry.price_usd + " USD" + " (" + lbry.percent_change_24h + "%)"
+                    document.querySelector('.ticker-price b').innerHTML = parseFloat(lbry.price_usd).toFixed(2) + " USD" + " (" + lbry.percent_change_24h + "%)"
                 })
                 .catch(function (e) {
                     this.errors.push(e)
