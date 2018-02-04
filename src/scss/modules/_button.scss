@@ -88,7 +88,7 @@
     }
   }
   &--nav {
-    z-index: 100;
+    z-index: 150;
     cursor: pointer;
     position: absolute;
     background-color: #242424;
@@ -101,12 +101,12 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: all 150ms ease-in-out;
     top: 10rem;
+    @include desktop-hd {
+      top: 6.5rem;
+    }
     @include phone {
       right: 2rem;
       top: 4.5rem;
-    }
-    @include tablet-min {
-      display: none;
     }
     &:hover {
       transform: translateY(-.25rem);

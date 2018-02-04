@@ -9,8 +9,8 @@
 <!-- Intro section -->
 <section class="container center section-intro">
     <div class="content-text--full-height">
-        <h1 class="text-center mx-auto" style="opacity: 0;"><?php the_field('title'); ?></h1>
-        <h3 class="text-center mx-auto" style="opacity: 0;"><?php the_field('description'); ?></h3>
+        <h1 id="page-intro-title" class="text-center mx-auto" style="opacity: 0;"><?php the_field('title'); ?></h1>
+        <h4 id="page-intro-text" class="text-center mx-auto" style="opacity: 0;"><?php the_field('description'); ?></h4>
         <div class="container center flex">
             <div>
                 <a target="_blank" href="https://lbry.io/get" class="btn--primary" style="opacity: 0;">Get LBRY</a>

@@ -21,7 +21,7 @@
   .btn--secondary {
     margin-top: 2rem;
     @include phone {
-      margin-top: 1rem;
+      margin-top: .5rem;
     }
   }
   .btn--primary {
@@ -34,6 +34,17 @@
     @include phone {
       display: flex;
       flex-direction: column;
+    }
+  }
+  #page-intro-text {
+    max-width: 45rem;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    @include phone {
+      font-size: 1rem;
+      max-width: 100%;
+      margin: 0 auto;
     }
   }
 }

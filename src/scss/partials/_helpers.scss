@@ -77,7 +77,7 @@
     background-color: rgba(0,0,0, .6);
   }
    @include phone {
-     bottom: 0;
+     display: none;
    }
 }
 

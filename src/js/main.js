@@ -5,7 +5,7 @@ $(function () {
 
     basicTimeline
         .add({
-            targets: '.section-intro h1',
+            targets: '.section-intro #page-intro-title',
             scale: [0.5, 1],
             opacity: [0, 1],
             delay: 600,
@@ -14,7 +14,7 @@ $(function () {
             easing: 'easeOutExpo'
         })
         .add({
-            targets: '.section-intro h3',
+            targets: '.section-intro #page-intro-text',
             scale: [0.2, 1],
             opacity: [0, 1],
             offset: '-=1600',

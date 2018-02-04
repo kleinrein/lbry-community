@@ -15,9 +15,9 @@
   }
   &--full-height {
     position: relative;
-    padding: 45vh 10vw;
+    padding: 37.5vh 10vw;
     @include phone {
-      padding: 35vh 10vw;
+      padding: 27.5vh 10vw;
     }
   }
   a {
