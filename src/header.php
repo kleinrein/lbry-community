@@ -13,8 +13,9 @@
     <title><?php wp_title('-', true, 'right'); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.11/tiny-slider.css">
+    <!-- [if IE]> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600" rel="stylesheet">
+    <!-- <![endif] -->
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_bloginfo('template_url') ?>/apple-touch-icon.png">
@@ -41,12 +42,15 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<!-- [if !IE]> -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600" rel="stylesheet" lazyload="1">
+<!-- <![endif] -->
 <div class="wrapper">
     <div class="grid">
         <header class="row center">
             <div class="flex" style="z-index: 100;">
                 <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                    <img class="img-header" src="<?php echo get_bloginfo('template_url') ?>/images/lbrycommunity.svg"/>
+                    <img alt="lbry-logo-image" class="img-header" src="<?php echo get_bloginfo('template_url') ?>/images/lbrycommunity.svg"/>
                 </a>
             </div>
             <div class="col"></div>

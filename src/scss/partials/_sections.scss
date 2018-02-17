@@ -44,8 +44,14 @@
     @include phone {
       font-size: 1rem;
       max-width: 100%;
-      margin: 0 auto;
+      margin: 2rem auto;
     }
+  }
+  @include phone {
+    min-height: 60rem;
+  }
+  @include tablet {
+    min-height: 55rem;
   }
 }
 

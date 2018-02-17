@@ -42,7 +42,7 @@
     text-decoration: none;
   }
   @include phone {
-    top: .5rem;
+    top: 2rem;
   }
   .ticker-title {
     color: #717171;
@@ -50,7 +50,7 @@
     font-size: 1.1rem;
     text-align: right;
     @include phone {
-      font-size: .9rem;
+      font-size: 1rem;
     }
   }
   .ticker-price {

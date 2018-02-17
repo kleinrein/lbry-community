@@ -110,7 +110,6 @@ article {
   }
   .btn--icon {
     margin: 0 auto;
-    display: block;
     text-align: center;
     display: inline-block;
     box-shadow: 1px 5px 5px rgba(0,0,0,.15);
@@ -202,5 +201,8 @@ article {
   }
   @include tablet {
     left: 2.5rem;
+  }
+  @include phone {
+    left: 1.12rem;
   }
 }
