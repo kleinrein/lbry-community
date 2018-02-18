@@ -43,7 +43,7 @@ if ($posts || $featured) {
         $image = catch_first_image($post->ID);
         ?>
 
-        <article class="article--featured margin-top margin-bottom">
+        <article class="article--featured">
             <?php if ($image) { ?>
                 <div class="article-preview-image--featured img-bg"
                      style="background: url(<?php echo $image ?>) no-repeat center center;"></div>
