@@ -5,5 +5,8 @@ footer {
   a {
     text-decoration: none;
     color: #FFFFFF;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

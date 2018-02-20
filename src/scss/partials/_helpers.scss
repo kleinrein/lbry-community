@@ -79,6 +79,9 @@
    @include phone {
      display: none;
    }
+   @include tablet {
+    bottom: 8rem;
+   }
 }
 
 // Boxes
