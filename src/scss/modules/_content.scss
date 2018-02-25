@@ -17,6 +17,8 @@
     position: relative;
     padding: 37.5vh 10vw;
     @include phone {
+      max-width: 90%;
+      width: 90%;
       padding: 42.5vh 10vw;
     }
   }

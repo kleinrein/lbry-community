@@ -109,6 +109,8 @@
     @include phone {
       right: 2rem;
       top: 4.5rem;
+      opacity: 1 !important;
+      transform: translateY(0);
     }
     &:hover {
       transform: translateY(-.25rem);
