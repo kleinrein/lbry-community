@@ -101,6 +101,8 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: all 150ms ease-in-out;
     top: 10rem;
+    opacity: var(--opacity);
+    transform: translateY(var(--tranY));
     @include desktop-hd {
       top: 6.5rem;
     }

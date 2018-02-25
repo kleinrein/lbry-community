@@ -1,6 +1,6 @@
 </div>
 <footer>
-    <div class="container">
+    <div class="container rel">
         <a class="text-center" target="_blank" href="https://github.com/kleinrein/lbry-community"><small>Looking for the source code of this site? You can find it here.</small></a>
     </div>
 </footer>

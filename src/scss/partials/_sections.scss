@@ -5,6 +5,7 @@
 }
 
 .section-intro {
+  @extend .flex;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,7 +14,6 @@
   left: 0;
   max-width: 100% !important;
   max-height: 100vh;
-  flex: 1;
   top: -13.5em;
   margin-bottom: -13.5em !important;
   position: relative;

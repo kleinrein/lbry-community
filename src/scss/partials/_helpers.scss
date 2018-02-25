@@ -29,6 +29,9 @@
 .flex {
   display: flex;
   flex: 1;
+  @include ie11 {
+    flex: 1 0 auto;
+  }
 }
 
 .search-result {
@@ -48,7 +51,6 @@
   }
 }
 
-// Scroll down
 .scroll-down {
   @include centerer(true, false);
   width: 2.5rem;
@@ -84,7 +86,6 @@
    }
 }
 
-// Boxes
 .box-dark {
   padding: 4rem;
   background: #1C1C1C;
@@ -153,4 +154,8 @@
   border:1px solid #666;
   padding:20px;
   margin:20px;
+}
+
+.rel {
+  position: relative;
 }

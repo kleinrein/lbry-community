@@ -82,7 +82,7 @@ html.full-menu-visible body {
   background: radial-gradient(100vh at 50% 50%, #262626 0%, #1A1A1A 100%);
   transform: scale(0.5);
   opacity: 0;
-  z-index: 150;
+  z-index: 75;
   #menu-full {
     background-color: color(mine-shaft);
     box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.1);
