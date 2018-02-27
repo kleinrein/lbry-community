@@ -16,6 +16,7 @@
   &--full-height {
     position: relative;
     padding: 37.5vh 10vw;
+    max-width: 90%;
     @include phone {
       max-width: 90%;
       width: 90%;
